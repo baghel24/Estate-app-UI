@@ -1,23 +1,48 @@
 
+import { instagram, facebook, linkedin, twitter } from "../assets";
+
 export const navigtion = [
     {
-        id: "0",
+        id: "home",
         title: "Home",
-        url: "#home"
+        // url: "home"
     },
     {
-        id: "1",
+        id: "services",
         title: "Service",
-        url: "#Services"
+        // url: "#services"
     },
     {
-        id: "2",
+        id: "agents",
         title: "Agents",
-        url: "#Agents"
+        // url: "agents"
     },
     {
-        id: "3",
+        id: "contact",
         title: "Contact",
-        url: "#Contact"
+        // url: "contact"
     }
 ];
+
+export const socialMedia = [
+    {
+      id: "social-media-1",
+      icon: instagram,
+      link: "https://www.instagram.com/",
+    },
+    {
+      id: "social-media-2",
+      icon: facebook,
+      link: "https://www.facebook.com/",
+    },
+    {
+      id: "social-media-3",
+      icon: twitter,
+      link: "https://www.twitter.com/",
+    },
+    {
+      id: "social-media-4",
+      icon: linkedin,
+      link: "https://www.linkedin.com/",
+    },
+  ];

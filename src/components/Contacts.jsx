@@ -2,7 +2,7 @@ import React from 'react';
 
 const Contacts = () => {
   return (
-    <div className="py-8 ">
+    <div id = 'contact' className="py-8 bg-cover bg-center mx-auto" style={{ backgroundImage: `url(${'src/assets/contact-bg.png'})` }}>
       <div className="text-center">
         <h1 className="text-3xl font-bold text-gray-900 mb-2">Do You Have Any Questions?</h1>
         <h1 className="text-3xl font-bold text-gray-900 mb-6">Get Help From Us</h1>
@@ -12,7 +12,7 @@ const Contacts = () => {
       underline-offset-2    hover:after:-right-2 hover:before:top-8 hover:before:right-16 hover:after:scale-150 hover:after:blur-none 
       hover:before:-bottom-8 hover:before:blur-none hover:bg-sky-100 hover:underline hover:underline-offset-4  origin-left hover:decoration-2 
       hover:text-n-6 relative bg-sky-100 h-12 w-[15rem] border text-left p-3 text-gray-500 text-base font-bold rounded-lg  overflow-hidden  
-      before:absolute before:w-14 before:h-14  before:right-1 before:top-1 before:z-10 
+      before:absolute before:w-14 before:h-14  before:right-1 before:top-1 before:z-10 scale-x-100	
       before:bg-n-9 before:rounded-full before:blur-lg  after:absolute after:z-10 after:w-20 after:h-20   
       after:bg-n-6 after:right-8 after:top-3 after:rounded-full after:blur">
   Chat With us
@@ -24,11 +24,12 @@ const Contacts = () => {
       before:absolute before:w-14 before:h-14  before:right-1 before:top-1 before:z-10 
       before:bg-n-9 before:rounded-full before:blur-lg  after:absolute after:z-10 after:w-20 after:h-20   
       after:bg-n-6 after:right-8 after:top-3 after:rounded-full after:blur">
-  Chat With us
+  Browse Q/A
 </button>
 
       </div>
-      <div className="w-full max-w-[400px] my-9 bg-n-8 rounded-lg shadow-xl shadow-n-8  p-6 mx-auto">
+      <div className="w-full max-w-[400px] flex-col my-9 bg-n-8 rounded-lg shadow-xl shadow-n-8 hover:shadow-green-300 p-6 mx-auto"
+      >
         <h2 className="text-2xl font-bold text-n-6 text-center mb-4 ">Contact Form</h2>
 
         <form className="flex flex-col">

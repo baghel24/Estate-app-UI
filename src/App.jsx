@@ -1,4 +1,5 @@
 import Contacts from "./components/Contacts"
+import Footer from "./components/Footer"
 import Header from "./components/Header"
 import Home from "./components/Home"
 import Houses from "./components/Houses"
@@ -20,7 +21,9 @@ function App() {
       <Houses/>
       <Rating/>
       <Contacts/>
+      <Footer/>
       </div>
+      <div>wfwef</div>
 
     </>
   )
