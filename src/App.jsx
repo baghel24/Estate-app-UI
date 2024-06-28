@@ -1,29 +1,34 @@
+import HomePage from "./HomeLandingPage/HomePage"
 import Contacts from "./components/Contacts"
 import Footer from "./components/Footer"
 import Header from "./components/Header"
 import Home from "./components/Home"
-import Houses from "./components/Houses"
+import ListPage from "./components/Pages/ListPage"
+import SignIn from "./components/Pages/SignIn"
+import SignUp from "./components/Pages/SignUp"
 import Qualities from "./components/Qualities"
-import Rating from "./components/Rating"
-import Search from "./components/Search"
-import Stats from "./components/Stats"
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 
 function App() {
 
   return (
     <>
-      <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
-      <Header/>
-      <Home/>
-      <Search/>
-      <Stats/>
-      <Qualities/>
-      <Houses/>
-      <Rating/>
-      <Contacts/>
-      <Footer/>
-      </div>
-      <div>wfwef</div>
+    <BrowserRouter>
+ <div className=" pt-[4rem] lg:pt-[5rem] overflow-hidden">
+    
+ <Header/>
+      <Routes>
+        <Route path="/" element={<HomePage/>} />
+        <Route path="/services" element={<Qualities/>} />
+        <Route path="/contact" element={<Contacts/>} />
+        <Route path="/listpage" element={<ListPage />} />
+        <Route path="/signin" element={<SignIn/>} />
+        <Route path="/signup" element={<SignUp/>} />
+      </Routes>
+    <Footer/>
+    </div>
+    </BrowserRouter>
 
     </>
   )

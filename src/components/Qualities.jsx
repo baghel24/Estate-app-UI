@@ -1,8 +1,9 @@
 import React from 'react';
+import { services } from '../constants';
 
 const Qualities = () => {
   return (
-    <section id='services' className="py-8 bg-cover bg-center mx-auto" style={{ backgroundImage: `url(${'src/assets/qualities.bg.png'})` }}>
+    <section id='services' className="py-8 mx-[5rem]" >
       <div className='text-center'>
         <h1 className='h2 font-bold text-n-6'>Why Choose Us</h1>
         <p className='my-4 body-1 max-w-xl mx-auto font-bold text-n-6/90'>
@@ -10,29 +11,21 @@ const Qualities = () => {
         </p>
       </div>
       
-      <div className='flex mx-auto w-[89%] flex-row gap-9 my-14 '>
-        <div className='flex-1 bg-n-8 p-4 text-n-6 rounded-xl hover:shadow-xl hover:shadow-green-300 border-2'>
-          <img src="src/assets/icons8-books-64.png" alt="icon" className='px-6 py-4 bg-n-1 rounded-lg w-[7.5rem]' />
-        <h1 className='px-6 py-4 text-xl font-bold'>Expert Guidance</h1>
-        <p className='px-6'>Benefit from our team's seasoned expertise for a smooth buying experience</p>
-        </div>
-        <div className='flex-1 bg-n-8 p-4 text-n-6 rounded-xl hover:shadow-xl hover:shadow-green-300 border-2'>
-        <img src="src\assets\icons8-community-50.png" alt="icon" className='px-6 py-4 bg-n-1 rounded-lg w-[7.5rem]' />
-        <h1 className='px-6 py-4 text-xl font-bold'> Personalized Service</h1>
-        <p className='px-6'>Our services adapt to your unique needs, making your journey stress-free</p>
-        </div>
-        <div className='flex-1 bg-n-8 p-4 text-n-6 rounded-xl hover:shadow-xl hover:shadow-green-300 border-2'>
-        <img src="src\assets\icons8-process-100.png" alt="icon" className='px-6 py-4 bg-n-1 rounded-lg w-[7.5rem]' />
-        <h1 className=' px-6 py-4 text-xl font-bold'> Transparent Process</h1>
-        <p className='px-6'>Stay informed with our clear and honest approach to buying your home</p>
-        </div>
-        <div className='flex-1 bg-n-8 p-4 text-n-6 rounded-xl hover:shadow-xl hover:shadow-green-300 border-2'>
-        <img src="src\assets\icons8-hand-shake-64.png" alt="icon" className='px-6 py-4 bg-n-1 rounded-lg w-[7.5rem]' />
-        <h1 className=' px-6 py-4 text-xl font-bold'> Exceptional Support</h1>
-        <p className='px-6 '>Providing peace of mind with our responsive and attentive customer service</p>
-        </div>
-      </div>
       
+
+      <div className='flex flex-wrap justify-center w-full gap-9 my-4'>
+      {services.map((service) => (
+        <div key={service.id} className='w-full sm:w-[48%] lg:w-[30%] bg-n-1 p-4 text-n-6 rounded-xl hover:shadow-2xl hover:shadow-n-9 hover:scale-105  flex flex-col items-center mb-6'>
+          <img
+            src={service.icon}
+            alt="icon"
+            className='px-2 py-1 bg-n-8 rounded-lg w-[3.5rem] mb-4'
+          />
+          <h1 className='px-6 py-4 text-xl font-bold text-center'>{service.id}</h1>
+          <p className='px-6 text-center'>{service.description}</p>
+        </div>
+      ))}
+    </div>
     </section>
   );
 }

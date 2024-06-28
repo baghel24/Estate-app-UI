@@ -1,3 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --font-sora: "Nunito Sans", sans-serif;
+ 
+  
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    @apply font-sans  ;
+  }
+}
+
+
+/* scrollbar.css */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+  }
+  
+  .hide-scrollbar {
+    -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+    scrollbar-width: none;     /* For Firefox */
+  }
+
+  @keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.slide-in {
+    animation: slideInFromLeft 1s ease-out;
+}
+
+  

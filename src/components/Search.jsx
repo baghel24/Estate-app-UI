@@ -2,7 +2,7 @@ import React from 'react'
 
 const Search = () => {
   return (
-    <div className="relative flex items-center justify-center hover:border-double hover:border-4 hover:border-n-6/30 bg-n-8 h-[8rem] mx-[14rem] px-9  px-6 py-8 rounded-lg shadow-xl hover:shadow-green-200 ">
+    <div className="relative flex items-center justify-center hover:border-double hover:border-4 hover:border-green-300/50 bg-n-8 h-[8rem] mx-[14rem] px-9  px-6 py-8 rounded-lg shadow-xl hover:shadow-green-200 ">
     <form className="flex flex-col md:flex-row md:space-x-[4rem] space-y-4 md:space-y-0 w-full">
         {/* Location Input with Image Icon */}
         <div className="flex items-center relative w-full">
@@ -14,8 +14,8 @@ const Search = () => {
                 type="text"
                 name="location"
                 placeholder="City Location"
-                className="w-full pl-11 pr-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-n-6"
-            />
+                className="peer w-full h-[2.5rem] pl-11 pr-4 outline-none px-4 text-base rounded-xl bg-white  border-2 hover:border-green-300 to-n-6 shadow-md focus:shadow-xl focus:shadow-n-8 "
+                />
         </div>
         
         {/* Min Price Input with Image Icon */}
@@ -30,7 +30,8 @@ const Search = () => {
                 min={0}
                 max={100000000}
                 placeholder="Min Price"
-                className="w-full pl-11 pr-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-n-6"
+                className="peer w-full h-[2.5rem] pl-11 pr-4 outline-none px-4 text-base rounded-xl bg-white  border-2 hover:border-green-300 to-n-6 shadow-md focus:shadow-xl focus:shadow-n-8 "
+
             />
         </div>
         
@@ -46,12 +47,12 @@ const Search = () => {
                 min={0}
                 max={100000000}
                 placeholder="Max Price"
-                className="w-full pl-11 pr-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-n-6"
+                className="peer w-full h-[2.5rem] pl-11 pr-4 outline-none px-4 text-base rounded-xl bg-white  border-2 hover:border-green-300 to-n-6 shadow-md focus:shadow-xl focus:shadow-n-8 "
             />
         </div>
-        
-        <button className="relative bg-white text-gray-800 py-4 px-10 flex items-center justify-center text-lg font-semibold gap-2 rounded-lg 
-         shadow-lg cursor-pointer overflow-hidden group hover:bg-n-6 hover:skew-x-12 duration-300	">
+        <button className="relative bg-white text-gray-800 py-4 px-10 flex items-center justify-center text-lg font-semibold border-2 gap-2 
+        overflow-hidden hover:bg-gradient-to-b from-green-400 to-n-6 hover:text-n-1
+         shadow-lg cursor-pointer rounded-full shadow-xl transform transition-all duration-500 hover:scale-110">
       <span className="relative flex items-center justify-center z-10">
         <svg viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -62,7 +63,8 @@ const Search = () => {
       </span>
       {/* Add button text if needed */}
       {/* <span className="relative z-10">Back</span> */}
-      <div className="absolute inset-0 bg-n-6 transform translate-x-full translate-y-full rounded-lg transition-transform duration-600 ease-in-out group-hover:translate-x-1/5 group-hover:translate-y-1/5"></div>
+      <div className="absolute inset-0 bg-n-6 transform translate-x-full translate-y-full rounded-lg transition-transform 
+      duration-600 ease-in-out group-hover:translate-x-1/5 group-hover:translate-y-1/5"></div>
     </button>
     </form>
 </div>
