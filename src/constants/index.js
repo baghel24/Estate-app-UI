@@ -84,6 +84,7 @@ export const socialMedia = [
   export const houseCardDetails =[
     {
       id:"1",
+      houseName:"Great 8 BHK Villa",
       houseImage:"src/assets/2.png",
       locationIcon:"src/assets/icons8-location-64 (1).png",
       location:"Mumbai",
@@ -96,6 +97,7 @@ export const socialMedia = [
     },
     {
       id:"2",
+      houseName:"Great 6 BHK Villa",
       houseImage:"src/assets/4.png",
       locationIcon:"src/assets/icons8-location-64 (1).png",
       location:"Goa",
@@ -108,6 +110,7 @@ export const socialMedia = [
     },
     {
       id:"3",
+      houseName:"Great 6 BHK Villa",
       houseImage:"src/assets/6.png",
       locationIcon:"src/assets/icons8-location-64 (1).png",
       location:"Delhi",
@@ -120,6 +123,7 @@ export const socialMedia = [
     },
     {
       id:"4",
+      houseName:"Great 4 BHK Villa",
       houseImage:"src/assets/5.png",
       locationIcon:"src/assets/icons8-location-64 (1).png",
       location:"Noida",

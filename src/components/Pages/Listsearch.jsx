@@ -4,28 +4,28 @@ const Listsearch = () => {
   return (
     <div>
       <div>
-      <h1 className='h4  text-n-6 font-bold'>Search Results for</h1>
+      <h1 className='h5 text-n-6 font-bold'>Search Results for</h1>
 
 
       {/* Content Section */}
-      <div className='relative bg-n-7 h-auto px-6 py-3 rounded-lg shadow-md hover:shadow-green-200'>
+      <div className='relative bg-n-7 h-auto px-6 py-2 rounded-lg shadow-md hover:shadow-green-200'>
         <div className="flex items-center relative w-full mb-3">
           <span className="absolute left-3">
-            <img src="src/assets/icons8-location-64.png" alt="Location Icon" className="h-5 w-5" />
+            <img src="src/assets/icons8-location-64.png" alt="Location Icon" className="h-4 w-4" />
           </span>
           <input
             id="location"
             type="text"
             name="location"
             placeholder="City Location"
-            className="w-full pl-11 pr-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-n-6"
-          />
+            className="peer w-full pl-10 py-1.5 outline-none px-4 text-base rounded-xl bg-white  border-2 hover:border-green-300 to-n-6 shadow-md focus:shadow-xl focus:shadow-n-8 "          />
         </div>
 
-        <div className='relative flex mt-3 gap-5'>
-          <div className='items-center relative w-full mb-3'>
+        <div className='relative flex mt-2 gap-5'>
+          <div className='items-center relative w-full'>
             <label htmlFor="type">Type</label>
-            <select name="type" id="type" className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-n-6">
+            <select name="type" id="type" 
+ className="peer w-full py-1.5 outline-none px-4 text-base rounded-xl bg-white  border-2 hover:border-green-300 to-n-6 shadow-md focus:shadow-xl focus:shadow-n-8 "            >
               <option value="buy">Buy</option>
               <option value="Rent">Rent</option>
               <option value="sell">Sell</option>
@@ -34,7 +34,8 @@ const Listsearch = () => {
 
           <div className='items-center relative w-full mb-3'>
             <label htmlFor="category">Category</label>
-            <select name="category" id="category" className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-n-6">
+            <select name="category" id="category" 
+ className="peer w-full py-1.5 outline-none px-4 text-base rounded-xl bg-white  border-2 hover:border-green-300 to-n-6 shadow-md focus:shadow-xl focus:shadow-n-8 "            >
               <option value="electronics">Electronics</option>
               <option value="furniture">Furniture</option>
               <option value="clothing">Clothing</option>
@@ -42,7 +43,8 @@ const Listsearch = () => {
           </div>
           <div className='items-center relative w-full mb-3'>
             <label htmlFor="condition">Condition</label>
-            <select name="condition" id="condition" className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-n-6">
+            <select name="condition" id="condition"   className="peer w-full py-1.5 outline-none px-4 text-base rounded-xl bg-white  border-2 hover:border-green-300 to-n-6 shadow-md focus:shadow-xl focus:shadow-n-8 "
+            >
               <option value="new">New</option>
               <option value="used">Used</option>
               <option value="refurbished">Refurbished</option>
@@ -57,7 +59,7 @@ const Listsearch = () => {
               min={0}
               max={100000000}
               placeholder=""
-              className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-n-6"
+               className="peer w-full py-1.5 outline-none px-4 text-base rounded-xl bg-white  border-2 hover:border-green-300 to-n-6 shadow-md focus:shadow-xl focus:shadow-n-8 "
             />
           </div>
 
@@ -71,8 +73,7 @@ const Listsearch = () => {
               min={0}
               max={100000000}
               placeholder=""
-              className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-n-6"
-            />
+              className="peer w-full py-1.5 outline-none px-4 text-base rounded-xl bg-white  border-2 hover:border-green-300 to-n-6 shadow-md focus:shadow-xl focus:shadow-n-8 "            />
           </div>
           <div className=" items-center relative w-full mb-3">
           <label htmlFor="category">Bedrooms</label>
@@ -84,11 +85,10 @@ const Listsearch = () => {
               min={0}
               max={20}
               placeholder=""
-              className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-n-6"
-            />
+              className="peer w-full py-1.5 outline-none px-4 text-base rounded-xl bg-white  border-2 hover:border-green-300 to-n-6 shadow-md focus:shadow-xl focus:shadow-n-8 "            />
           </div>
-          <button className="relative h-[4rem] bg-white text-gray-800 py-3 px-10 flex items-center justify-center text-lg font-semibold rounded-lg 
-         shadow-lg cursor-pointer overflow-hidden group hover:bg-n-6  duration-300	">
+          <button className="relative h-[3.7rem] bg-white text-gray-800 py-1.5 px-10 flex items-center justify-center text-lg font-semibold rounded-lg 
+         shadow-lg cursor-pointer overflow-hidden group hover:bg-gradient-to-r from-green-500 to-n-6 hover:scale-105 transition-all duration-600	">
       <span className="relative flex items-center justify-center z-10">
         <svg viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
           <path
