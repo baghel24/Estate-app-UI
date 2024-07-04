@@ -2,7 +2,7 @@ import React from 'react';
 
 const SignUp = () => {
   return (
-    <div className="flex justify-center items-center min-h-screen mb-9">
+    <div className="flex justify-center items-center min-h-screen mb-9 mt-14 md:mt-3">
       <div className="w-full max-w-md bg-n-7 rounded-xl shadow-2xl  p-12">
       <a className=" w-full flex item-center justify-center xl:mr-8 mb-2" href="home">
         <img src="src\assets\Simple Typography Real Estate Logo (2).png" width={150} height={40}  alt="logo" className=''/>

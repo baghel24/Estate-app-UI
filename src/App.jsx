@@ -3,6 +3,7 @@ import Contacts from "./components/Contacts"
 import Footer from "./components/Footer"
 import Header from "./components/Header"
 import Home from "./components/Home"
+import HouseDetails from "./components/Pages/HouseDetails"
 import ListPage from "./components/Pages/ListPage"
 import SignIn from "./components/Pages/SignIn"
 import SignUp from "./components/Pages/SignUp"
@@ -23,6 +24,7 @@ function App() {
         <Route path="/services" element={<Qualities/>} />
         <Route path="/contact" element={<Contacts/>} />
         <Route path="/listpage" element={<ListPage />} />
+        <Route path="/houseDetails" element={<HouseDetails />} />
         <Route path="/signin" element={<SignIn/>} />
         <Route path="/signup" element={<SignUp/>} />
       </Routes>

@@ -8,41 +8,39 @@ const Listsearch = () => {
 
 
       {/* Content Section */}
-      <div className='relative bg-n-7 h-auto px-6 py-2 rounded-lg shadow-md hover:shadow-green-200'>
-        <div className="flex items-center relative w-full mb-3">
+      <div className='relative bg-n-7 h-auto px-2 py-2 rounded-lg shadow-md hover:shadow-green-200'>
+        <div className="flex items-center relative w-full gap-2">
+        <div className='items-center relative w-full'>
           <span className="absolute left-3">
-            <img src="src/assets/icons8-location-64.png" alt="Location Icon" className="h-4 w-4" />
+            <img src="src/assets/icons8-location-64.png" alt="Location Icon" className="h-4 w-4 mt-[.6rem]" />
           </span>
           <input
             id="location"
             type="text"
             name="location"
             placeholder="City Location"
-            className="peer w-full pl-10 py-1.5 outline-none px-4 text-base rounded-xl bg-white  border-2 hover:border-green-300 to-n-6 shadow-md focus:shadow-xl focus:shadow-n-8 "          />
+            className="peer w-[30rem] pl-10 py-1.5 outline-none px-4 text-base rounded-xl bg-white  border-2 hover:border-green-300 to-n-6 shadow-md focus:shadow-xl focus:shadow-n-8 "          />
         </div>
-
-        <div className='relative flex mt-2 gap-5'>
-          <div className='items-center relative w-full'>
-            <label htmlFor="type">Type</label>
+        <div className='items-center relative w-full'>
+            {/* <label htmlFor="type">Type</label> */}
             <select name="type" id="type" 
- className="peer w-full py-1.5 outline-none px-4 text-base rounded-xl bg-white  border-2 hover:border-green-300 to-n-6 shadow-md focus:shadow-xl focus:shadow-n-8 "            >
+            className="peer w-full py-1.5 outline-none px-4 text-base rounded-xl bg-white  border-2 hover:border-green-300 to-n-6 shadow-md focus:shadow-xl focus:shadow-n-8 "            >
               <option value="buy">Buy</option>
               <option value="Rent">Rent</option>
               <option value="sell">Sell</option>
             </select>
           </div>
-
-          <div className='items-center relative w-full mb-3'>
-            <label htmlFor="category">Category</label>
-            <select name="category" id="category" 
- className="peer w-full py-1.5 outline-none px-4 text-base rounded-xl bg-white  border-2 hover:border-green-300 to-n-6 shadow-md focus:shadow-xl focus:shadow-n-8 "            >
+          <div className='w-full'>
+            {/* <label htmlFor="category">Category</label> */}
+            <select name="category" id="category" placeholder="Price"
+            className="peer w-full py-1.5 outline-none px-4 text-base rounded-xl bg-white  border-2 hover:border-green-300 to-n-6 shadow-md focus:shadow-xl focus:shadow-n-8 "            >
               <option value="electronics">Electronics</option>
               <option value="furniture">Furniture</option>
               <option value="clothing">Clothing</option>
             </select>
           </div>
-          <div className='items-center relative w-full mb-3'>
-            <label htmlFor="condition">Condition</label>
+          <div className='items-center relative w-full '>
+            {/* <label htmlFor="condition">Condition</label> */}
             <select name="condition" id="condition"   className="peer w-full py-1.5 outline-none px-4 text-base rounded-xl bg-white  border-2 hover:border-green-300 to-n-6 shadow-md focus:shadow-xl focus:shadow-n-8 "
             >
               <option value="new">New</option>
@@ -50,7 +48,7 @@ const Listsearch = () => {
               <option value="refurbished">Refurbished</option>
             </select>
           </div>
-          <div className=" items-center relative w-full mb-3">
+          {/* <div className=" items-center relative w-full">
           <label htmlFor="category">Min Price</label>
             <input
               id="minprice"
@@ -58,13 +56,12 @@ const Listsearch = () => {
               name="minprice"
               min={0}
               max={100000000}
-              placeholder=""
+              placeholder="Price"
                className="peer w-full py-1.5 outline-none px-4 text-base rounded-xl bg-white  border-2 hover:border-green-300 to-n-6 shadow-md focus:shadow-xl focus:shadow-n-8 "
             />
-          </div>
-
-          <div className=" items-center relative w-full mb-3">
-          <label htmlFor="category">Max Price</label>
+          </div> */}
+          <div className=" items-center relative w-full">
+          {/* <label htmlFor="category">Max Price</label> */}
             
             <input
               id="maxprice"
@@ -72,11 +69,11 @@ const Listsearch = () => {
               name="maxprice"
               min={0}
               max={100000000}
-              placeholder=""
+              placeholder="max price"
               className="peer w-full py-1.5 outline-none px-4 text-base rounded-xl bg-white  border-2 hover:border-green-300 to-n-6 shadow-md focus:shadow-xl focus:shadow-n-8 "            />
           </div>
-          <div className=" items-center relative w-full mb-3">
-          <label htmlFor="category">Bedrooms</label>
+          <div className=" items-center relative w-full \">
+          {/* <label htmlFor="category">Bedrooms</label> */}
             
             <input
               id="maxprice"
@@ -84,10 +81,11 @@ const Listsearch = () => {
               name="maxprice"
               min={0}
               max={20}
-              placeholder=""
+              placeholder="Beds"
               className="peer w-full py-1.5 outline-none px-4 text-base rounded-xl bg-white  border-2 hover:border-green-300 to-n-6 shadow-md focus:shadow-xl focus:shadow-n-8 "            />
-          </div>
-          <button className="relative h-[3.7rem] bg-white text-gray-800 py-1.5 px-10 flex items-center justify-center text-lg font-semibold rounded-lg 
+          </div>       
+          
+          <button className="relative h-[3.5rem] bg-white text-gray-800 py-1.5 px-10 flex items-center justify-center text-lg font-semibold rounded-lg 
          shadow-lg cursor-pointer overflow-hidden group hover:bg-gradient-to-r from-green-500 to-n-6 hover:scale-105 transition-all duration-600	">
       <span className="relative flex items-center justify-center z-10">
         <svg viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg">

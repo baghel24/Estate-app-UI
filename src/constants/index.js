@@ -174,3 +174,79 @@ export const socialMedia = [
       review: 'Working with Dwello was a pleasure. They helped me find the perfect apartment in New York and made the whole process seamless and enjoyable. I highly recommend their services!',
     }
   ]
+
+ export const HouseRatingBar = [
+  {
+    id:"1",
+    label: "Environment",
+    rate:"8.8",
+    widthPercentage:"88%"
+  },
+  {
+    id:"2",
+    label: "Neighbourhood",
+    rate:"6.8",
+    widthPercentage:"68%"
+  },
+  {
+    id:"3",
+    label: "Safety",
+    rate:"8.0",
+    widthPercentage:"80%"
+  },
+  {
+    id:"4",
+    label: "Cleanliness",
+    rate:"7.8",
+    widthPercentage:"78%"
+  },
+  {
+    id:"5",
+    label: "Roads",
+    rate:"7.2",
+    widthPercentage:"72%"
+  },
+  {
+    id:"6",
+    label: "Commuting",
+    rate:"7.5",
+    widthPercentage:"75%"
+  },
+  {
+    id:"7",
+    label: "Public Transport",
+    rate:"7.0",
+    widthPercentage:"70%"
+  },
+  {
+    id:"8",
+    label: "Markets",
+    rate:"9.0",
+    widthPercentage:"90%"
+  },
+  {
+    id:"9",
+    label: "Restaurants",
+    rate:"9.2",
+    widthPercentage:"92%"
+  },
+  {
+    id:"10",
+    label: "Hospitals",
+    rate:"9.8",
+    widthPercentage:"98%"
+  },
+  {
+    id:"11",
+    label: "Schools",
+    rate:"8.9",
+    widthPercentage:"89%"
+  },
+  {
+    id:"12",
+    label: "Parking",
+    rate:"8.8",
+    widthPercentage:"88%"
+  },
+
+ ]
