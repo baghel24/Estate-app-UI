@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Houses from "../Houses"
 import HouseDesRight from './HouseDesRight';
-import { HouseRatingBar } from '../../constants';
+import { HouseRatingBar, Landmark,houseCardDetails } from '../../constants';
+import HouseShortDes from './HouseShortDes';
 
 // import HouseDetails from '../Pages/HouseDetails';
 const HouseDes = () => {
@@ -58,146 +59,29 @@ const HouseDes = () => {
 
   // Truncated text to show when the full text is hidden
   const truncatedText = fullText.slice(0, 100) + '...'; // Adjust the number of characters as needed
+  
+  const [currentIndex, setCurrentIndex] = useState(0);
 
+  // Function to go to the next slide
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === houseCardDetails.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  // Function to go to the previous slide
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === 0 ? houseCardDetails.length - 1 : prevIndex - 1
+    );
+  };
 
   return (
     <>
-      <div className='flex gap-12'>
+      <section >
+        <div className='flex gap-12'>
         <div className='w-[58.5%]'>
-          {/* Right Section */}
-          <div className="text-n-6 mb-4 mt-4">
-            <Link to={"/houseDetails"}><span className='flex justify-end'>Expand Page for more Details</span></Link>
-            <h1 className="text-3xl font-bold">1 BHK Flat For Sale in Srishti Oasis</h1>
-            <span className="text-2xl ">Bhandup West, Mumbai</span>
-            <span className=" flex text-3xl font-bold justify-end ">₹1 Cr</span>
-          </div>
-
-          <div id="gallery" className="relative  shadow-2xl  rounded-lg" data-carousel="slide">
-            {/* Carousel Wrapper */}
-            <div className="relative overflow-hidden  md:h-[20rem] shadow-2xl rounded-lg">
-              <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
-                {images.map((src, index) => (
-                  <div
-                    key={index}
-                    className="min-w-full"
-                  >
-                    <img
-                      src={src}
-                      className="w-full h-full object-cover"
-                      alt={`Slide ${index + 1}`}
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Slider Controls */}
-            <button
-              type="button"
-              className="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-              onClick={handlePrev}
-              disabled={isTransitioning}
-              data-carousel-prev
-            >
-              <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white">
-                <svg
-                  className="w-4 h-4 text-white"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 6 10"
-                >
-                  <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M5 1 1 5l4 4"
-                  />
-                </svg>
-                <span className="sr-only">Previous</span>
-              </span>
-            </button>
-            <button
-              type="button"
-              className="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-              onClick={handleNext}
-              disabled={isTransitioning}
-              data-carousel-next
-            >
-              <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white">
-                <svg
-                  className="w-4 h-4 text-white"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 6 10"
-                >
-                  <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="m1 9 4-4-4-4"
-                  />
-                </svg>
-                <span className="sr-only">Next</span>
-              </span>
-            </button>
-          </div>
-
-          <div className='max-w-[55rem]'>
-            <div className="relative p-2 mx-20 border-2 mt-3 flex gap-9 rounded-2xl bg-n-6 text-n-7 items-center justify-center">
-              <span>4 Bedrooms</span>
-              <span>3 Bathrooms</span>
-              <span>Fully Furnished</span>
-            </div>
-          </div>
-
-          <div className="border-4 border-n-8 border-double mt-4 p-6 rounded-2xl bg-n-1 shadow-md shadow-n-8">
-            <div className="flex w-full mb-6">
-              <div className="w-full">
-                <span className="text-gray-500">Area</span>
-                <h1 className="font-bold">1200 sq ft.</h1>
-              </div>
-              <div className="w-full">
-                <span className="text-gray-500">Floor</span>
-                <h1 className="font-bold">3 (out of 6 Floors)</h1>
-              </div>
-              <div className="w-full">
-                <span className="text-gray-500">Transaction Type</span>
-                <h1 className="font-bold">Resale</h1>
-              </div>
-              <div className="w-full">
-                <span className="text-gray-500">Facing</span>
-                <h1 className="font-bold">West</h1>
-              </div>
-            </div>
-            <div className="flex mb-9">
-              <div className="w-full">
-                <span className="text-gray-500">Status</span>
-                <h1 className="font-bold">Ready to move</h1>
-              </div>
-              <div className="w-full">
-                <span className="text-gray-500">Type of Ownership</span>
-                <h1 className="font-bold">Freehold</h1>
-              </div>
-              <div className="w-full">
-                <span className="text-gray-500">Furnished Status</span>
-                <h1 className="font-bold">Full Furnished</h1>
-              </div>
-              <div className="w-full">
-                <span className="text-gray-500">Age of Construction</span>
-                <h1 className="font-bold">10 to 15 years</h1>
-              </div>
-            </div>
-
-            <button type='button' className="  relative overflow-hidden bg-gradient-to-r from-green-400 to-n-6 text-white py-2 px-6 font-semibold 
-        rounded-3xl shadow-xl transform transition-all duration-500 hover:scale-110 ">
-              <span className="relative z-10">Contact Owner </span>
-            </button>
-
-          </div>
+          <HouseShortDes/>
           <div className='border-2 mt-5 px-6'>
             <h1 className=' py-3 h5 font-bold'>More Deatails</h1>
             <div className=' text-xl py-5 text-n-6 space-y-4'>
@@ -331,19 +215,22 @@ const HouseDes = () => {
             </div>
           </div>
 
-          <div className='border-2 mt-5 px-6 '>
+          <div className='border-2 mt-5 px-6 h-auto'>
             <h1 className='py-3 h5 font-bold '>Landmark</h1>
 
-            <div className='sm:grid sm:grid-cols-2 gap-5 ' >
-              <div className='border-2 shadow-lg px-4 py-3'>
-                <span  className='text-xl font-bold '>Educational Institute</span>
-                {/* <span className='justify-end' >icon</span> */}
-                <span className='flex'>Sahayadri Vidya Mandir. <strong> (3.0Km)</strong></span>
-                <span>Dg Khetan International School. <strong> (6.0Km)</strong></span>
+            <div className='sm:grid sm:grid-cols-2 gap-5 mb-6' >
+              {Landmark.map((landmark) => (
+                <div key={landmark.id} className=''>
+                    <div className='border-2 shadow-lg px-4 py-3 '>
+                <div className='flex w-full'>
+                <h1  className='text-xl font-bold w-full'>{landmark.label}</h1>
+                <img src={landmark.icon} alt="icon"  className='w-14 h-14'/>
+                </div>
+                <span className='flex'>{landmark.l1}<strong> (3.0Km)</strong></span>
+                <span>{landmark.l2} <strong> (6.0Km)</strong></span>
               </div>
-              <div className='border-2'>b</div>
-              <div className='border-2'>c</div>
-              <div className='border-2'>d</div>
+                </div>
+              ))}
             </div>
 
           </div>
@@ -352,8 +239,129 @@ const HouseDes = () => {
         <div className='mt-5 w-[29%]'>
           <HouseDesRight />
         </div>
-
+        </div>
+        <div className='relative border-2 mt-8 px-4 h-auto  w-[90%] '>
+  <h1 className='py-3 text-2xl font-bold'>Similar Properties</h1>
+  <div className='flex flex-wrap  gap-5 mb-6 w-full overflow-hidden'>
+    
+    {houseCardDetails.map((house) => (
+      <div 
+        key={house.id} 
+        className='w-full sm:w-[45%] lg:w-[20%] bg-gradient-to-t from-n-7 to-n-9 text-n-1 rounded-xl shadow-2xl overflow-hidden transition-transform duration-300'
+      >
+        <div 
+          className='bg-cover bg-center h-[11rem] md:h-[12rem] hover:scale-105 transition-transform duration-300'
+          style={{ backgroundImage: `url(${house.houseImage})` }}
+          alt={`Image of ${house.houseName}`}
+          aria-label={`Image of ${house.houseName}`}
+        >
+        </div>
+        
+        <div className="relative group p-4 max-w-sm mx-auto">
+          <h2 className='text-lg text-n-6 font-bold'>{house.houseName}</h2>
+          
+          <div className="py-2 text-lg md:text-xl font-bold flex items-center gap-2 text-n-6">
+            <img 
+              src={house.locationIcon} 
+              alt="Location icon" 
+              className='w-5 h-5 md:w-6 md:h-6' 
+              aria-hidden="true"
+            />
+            {house.location}
+          </div>
+          
+          <div className="flex justify-between text-sm md:text-md font-bold text-n-6 mb-4">
+            <div className='flex items-center gap-2'>
+              <img 
+                src={house.roomsIcon} 
+                alt="Rooms icon" 
+                className='w-5 h-5 md:w-6 md:h-6' 
+                aria-hidden="true"
+              />
+              {house.rooms} Rooms
+            </div>
+            <div className='flex items-center gap-2'>
+              <img 
+                src={house.sizeIcon} 
+                alt="Size icon" 
+                className='w-5 h-5 md:w-6 md:h-6' 
+                aria-hidden="true"
+              />
+              {house.Size} sq ft
+            </div>
+          </div>
+          
+          <div className="px-6 py-2 text-lg md:text-xl font-bold flex justify-end items-center gap-2 text-n-6">
+            $ {house.price}
+          </div>
+          
+          <button 
+            className="absolute opacity-0 bg-gradient-to-r from-green-400 to-n-6 group-hover:opacity-100 bottom-2 left-4 text-white py-1 px-4 rounded-lg transition-opacity duration-300 ease-in-out"
+            aria-label={`View details for ${house.houseName}`}
+          >
+            View Details
+          </button>
+        </div>
       </div>
+    ))}
+  </div>
+  {/* Slider Controls */}
+  <button
+              type="button"
+              className="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+              onClick={handlePrev}
+              disabled={isTransitioning}
+              data-carousel-prev
+            >
+              <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white">
+                <svg
+                  className="w-4 h-4 text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 6 10"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 1 1 5l4 4"
+                  />
+                </svg>
+                <span className="sr-only">Previous</span>
+              </span>
+            </button>
+            <button
+              type="button"
+              className="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+              onClick={handleNext}
+              disabled={isTransitioning}
+              data-carousel-next
+            >
+              <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white">
+                <svg
+                  className="w-4 h-4 text-n-6"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 6 10"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="m1 9 4-4-4-4"
+                  />
+                </svg>
+                <span className="sr-only">Next</span>
+              </span>
+            </button>
+</div>
+
+      </section> 
+      
     </>
 
   );

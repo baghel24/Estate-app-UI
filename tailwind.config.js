@@ -59,6 +59,22 @@ export default {
         4: "4",
         5: "5",
       },
+      animation: {
+        like_effect: 'like_effect 400ms ease',
+        dislike_effect: 'dislike_effect 400ms ease',
+      },
+      keyframes: {
+        like_effect: {
+          '0%': { transform: 'scale(0)' },
+          '50%': { transform: 'scale(1.2)' },
+          '100%': { transform: 'scale(1)' },
+        },
+        dislike_effect: {
+          '0%': { transform: 'scale(0)' },
+          '50%': { transform: 'scale(1.2)' },
+          '100%': { transform: 'scale(1)' },
+        },
+      },
     },
   },
   plugins: [

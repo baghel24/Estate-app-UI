@@ -2,13 +2,9 @@ import React from 'react'
 
 const Listsearch = () => {
   return (
-    <div>
-      <div>
-      <h1 className='h5 text-n-6 font-bold'>Search Results for</h1>
-
-
+    <section>
       {/* Content Section */}
-      <div className='relative bg-n-7 h-auto px-2 py-2 rounded-lg shadow-md hover:shadow-green-200'>
+      <div className='relative bg-n-7 h-auto px-2 py-1 rounded-lg shadow-md hover:shadow-green-200'>
         <div className="flex items-center relative w-full gap-2">
         <div className='items-center relative w-full'>
           <span className="absolute left-3">
@@ -99,8 +95,8 @@ const Listsearch = () => {
           
         </div>
       </div>
-    </div>
-    </div>
+    </section>
+    
   )
 }
 

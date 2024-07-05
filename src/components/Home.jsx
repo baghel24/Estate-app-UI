@@ -21,7 +21,7 @@ const Home = () => {
 
       <Link to={'/listpage'}>
       <button  type='button' 
-     className="my-6 md:my-14 border-2 relative overflow-hidden bg-gradient-to-r from-green-400 to-n-6 text-white py-3 md:py-4 px-6 md:px-8 font-semibold 
+     className="my-6 md:my-14 border-2 relative overflow-hidden bg-gradient-to-r from-green-400 to-n-6 text-white py-3 md:py-3 px-6 md:px-8 font-semibold 
      rounded-3xl mx-5 md:mx-0 shadow-xl transform transition-all duration-500 hover:scale-110 hover:rotate-3 hover:skew-x-12"
    ><span className="relative z-10">Get Started</span>
       </button>

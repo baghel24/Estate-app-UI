@@ -1,7 +1,8 @@
 import React from 'react';
 import Listsearch from './Listsearch';
-import HouseDes from '../HouseDetails/HouseDes';
+// import HouseDes from '../HouseDetails/HouseDes';
 import { houseCardDetails } from '../../constants';
+import HouseShortDes from '../HouseDetails/HouseShortDes';
 
 const ListPage = () => {
   return (
@@ -53,7 +54,7 @@ const ListPage = () => {
 
         {/* Right Section */}
         <div className='w-[50%] h-[calc(100vh-8rem)]  overflow-y-auto right-0 bg-n-8 rounded-md drop-shadow-2xl  p-4 hide-scrollbar'>
-          <HouseDes />
+          <HouseShortDes />
         </div>
       </div>
     </div>

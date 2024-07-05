@@ -5,7 +5,18 @@ const HouseDesRight = () => {
     <div className="p-4 lg:p-6 xl:p-8">
       <div className="relative mx-auto mt-3 flex border-2 rounded-xl items-center justify-center text-center shadow-xl max-w-2xl">
         <div className="w-1/3 border-r-2 p-2 flex items-center justify-center">
-          <img src="src/assets/icons8-heart-48.png" alt="Favorite" className="w-7" />  
+        <label className="relative block text-2xl cursor-pointer select-none transition-transform duration-100">
+      <input type="checkbox" className="absolute opacity-0 h-0 w-0 cursor-pointer" defaultChecked />
+      <div className=" checkmark w-8 h-8 transition-transform duration-100 animate-dislike_effect flex items-center justify-center">
+        <svg viewBox="0 0 256 256" className="w-full h-full">
+          <rect fill="none" height="256" width="256"></rect>
+          <path
+            d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z"
+            className="fill-none stroke-black stroke-[20px] transition-all duration-100"
+          ></path>
+        </svg>
+      </div>
+    </label> 
           <span className="hidden md:inline ml-2">Favorite</span>
         </div>
         <div className="w-1/3 border-r-2 p-2 flex items-center justify-center">

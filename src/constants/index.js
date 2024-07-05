@@ -133,7 +133,34 @@ export const socialMedia = [
       Size: "1,000",
       priceIcon:"src/assets/icons8-dollar-24.png",
       price:"1,5000"
-    }
+    },
+    {
+      id:"5",
+      houseName:"Great 4 BHK Villa",
+      houseImage:"src/assets/5.png",
+      locationIcon:"src/assets/icons8-location-64 (1).png",
+      location:"Noida",
+      roomsIcon:"src/assets/icons8-door-50.png",
+      rooms:"3",
+      sizeIcon:"src/assets/icons8-measurement-32.png",
+      Size: "1,000",
+      priceIcon:"src/assets/icons8-dollar-24.png",
+      price:"1,5000"
+    },
+    {
+      id:"6",
+      houseName:"Great 4 BHK Villa",
+      houseImage:"src/assets/5.png",
+      locationIcon:"src/assets/icons8-location-64 (1).png",
+      location:"Noida",
+      roomsIcon:"src/assets/icons8-door-50.png",
+      rooms:"3",
+      sizeIcon:"src/assets/icons8-measurement-32.png",
+      Size: "1,000",
+      priceIcon:"src/assets/icons8-dollar-24.png",
+      price:"1,5000"
+    },
+    
   ]
 
   export const cards = [
@@ -173,6 +200,7 @@ export const socialMedia = [
       rating: 4.7,
       review: 'Working with Dwello was a pleasure. They helped me find the perfect apartment in New York and made the whole process seamless and enjoyable. I highly recommend their services!',
     }
+    
   ]
 
  export const HouseRatingBar = [
@@ -249,4 +277,35 @@ export const socialMedia = [
     widthPercentage:"88%"
   },
 
+ ]
+
+ export const Landmark = [
+  {
+    id:"1",
+    label: "Educational Institute",
+    icon:"src/assets/icons8-school-48.png",
+    l1:"Sahayadri Vidya Mandir",
+    l2:"Dg Khetan International School ",
+  },
+  {
+    id:"2",
+    label: "Shopping Centre",
+    icon:"src/assets/icons8-shopping-mall-66.png",
+    l1:"Oberoi Mall",
+    l2:"Magnet Mal  ",
+  },
+  {
+    id:"3",
+    label: "Transportation Hub",
+    icon:"src/assets/icons8-transportation-60.png",
+    l1:"Kandivali Railway Station",
+    l2:"Nahur Railway Station ",
+  },
+  {
+    id:"4",
+    label: "Hospital",
+    icon:"src/assets/icons8-hospital-48.png",
+    l1:"Badwik Hospital",
+    l2:" ",
+  },
  ]
