@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { cards } from '../constants';
+import { ratingicon } from '../assets';
 
 const Rating = () => {
   const [currentCard, setCurrentCard] = useState(0);
@@ -49,7 +50,7 @@ const Rating = () => {
                   <h2 className='text-sm'>{card.location}</h2>
                 </div>
                 <div className='bg-n-1 flex px-1 text-center h-6 w-14 gap-2 rounded-sm'>
-                  <img src="src/assets/icons8-rating-30.png" alt="icon" className='rounded-full w-[1.2rem] h-[1.2rem]' />
+                  <img src={ratingicon} alt="icon" className='rounded-full w-[1.2rem] h-[1.2rem]' />
                   {card.rating}
                 </div>
               </div>

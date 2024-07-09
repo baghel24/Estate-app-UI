@@ -40,8 +40,8 @@ const ListPage = () => {
                   </div>
               </div>
               <div className="text-md font-bold flex gap-1 mt-5">
-                  <img src={house.priceIcon} alt="Price Icon" className='w-4 h-4 mt-[.25rem]' />
-                  {house.price}
+                  {/* <img src={house.priceIcon} alt="Price Icon" className='w-4 h-4 mt-[.25rem]' /> */}
+                  $ {house.price}
                 </div>
               </div>
               </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { priceicon, location1icon } from '../assets';
 
 const Search = () => {
   return (
@@ -9,7 +10,7 @@ const Search = () => {
         {/* Location Input with Image Icon */}
         <div className="flex items-center relative w-full md:w-auto">
           <span className="absolute left-3">
-            <img src="src/assets/icons8-location-64.png" alt="Location Icon" className="h-5 w-5" />
+            <img src={location1icon} alt="Location Icon" className="h-5 w-5" />
           </span>
           <input
             id="location"
@@ -23,7 +24,7 @@ const Search = () => {
         {/* Min Price Input with Image Icon */}
         <div className="flex items-center relative w-full md:w-auto">
           <span className="absolute left-3">
-            <img src="src/assets/icons8-price-50.png" alt="Min Price Icon" className="h-5 w-5" />
+            <img src={priceicon} alt="Min Price Icon" className="h-5 w-5" />
           </span>
           <input
             id="minprice"
@@ -39,7 +40,7 @@ const Search = () => {
         {/* Max Price Input with Image Icon */}
         <div className="flex items-center relative w-full md:w-auto">
           <span className="absolute left-3">
-            <img src="src/assets/icons8-price-50.png" alt="Max Price Icon" className="h-5 w-5" />
+            <img src={priceicon} alt="Max Price Icon" className="h-5 w-5" />
           </span>
           <input
             id="maxprice"

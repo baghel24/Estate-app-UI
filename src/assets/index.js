@@ -19,10 +19,11 @@ import gamesicon from "./icons8-games-16 (1).png";
 import processicon from "./icons8-process-100.png";
 import securityicon from "./icons8-smart-home-checked-24.png";
 import locationicon from "./icons8-location-64 (1).png";
+import location1icon from "./icons8-location-64.png";
 import supporticon from "./icons8-hand-shake-64.png";
 import measurementicon from "./icons8-measurement-32.png"
-// import bookicon from "./icons8-books-64.png"
-// import bookicon from "./icons8-books-64.png"
+import ratingicon from "./icons8-rating-30.png"
+import priceicon from "./icons8-price-50.png"
 // import bookicon from "./icons8-books-64.png"
 // import bookicon from "./icons8-books-64.png"
 // import bookicon from "./icons8-books-64.png"
@@ -49,7 +50,10 @@ export{
   processicon,
   securityicon,
   locationicon,
+  location1icon,
   supporticon,
   measurementicon,
+  ratingicon,
+  priceicon,
 
 }

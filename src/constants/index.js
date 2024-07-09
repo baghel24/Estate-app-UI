@@ -6,6 +6,7 @@ import { instagram, facebook, linkedin, twitter, bookicon,bulbicon,
   dooricon,
   gamesicon, 
   securityicon,
+  supporticon,
   locationicon,
   measurementicon,
 } from "../assets";
@@ -85,7 +86,7 @@ export const socialMedia = [
     },
     {
       id:"Exceptional support",
-      icon: securityicon,
+      icon: supporticon,
       description:"Providing peace of mind with our responsive and attentive customer service"
     }
   ]
