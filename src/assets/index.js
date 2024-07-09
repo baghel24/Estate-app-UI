@@ -9,6 +9,7 @@ import homebg from "./home-bg.png";
 import homeherohouse from "./home-herohouse.png";
 import statsIm from "./11.png";
 import ServiceBG from "./services-BG.png";
+import bookicon from "./icons8-books-64.png"
 
 export{
   Logo,
@@ -22,4 +23,5 @@ export{
   homeherohouse,
   statsIm,
   ServiceBG,
+  bookicon,
 }

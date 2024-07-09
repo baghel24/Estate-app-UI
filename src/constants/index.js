@@ -1,5 +1,5 @@
 
-import { instagram, facebook, linkedin, twitter } from "../assets";
+import { instagram, facebook, linkedin, twitter, bookicon } from "../assets";
 
 export const navigtion = [
     {
@@ -51,7 +51,7 @@ export const socialMedia = [
   export const services = [
     {
       id:"Expert guidance",
-      icon: "src/assets/icons8-books-64.png",
+      icon: bookicon,
       description:"Benefit from our team's seasoned expertise for a smooth buying experience"
     },
     {
