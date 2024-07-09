@@ -134,32 +134,32 @@ export const socialMedia = [
       priceIcon:"src/assets/icons8-dollar-24.png",
       price:"1,5000"
     },
-    {
-      id:"5",
-      houseName:"Great 4 BHK Villa",
-      houseImage:"src/assets/5.png",
-      locationIcon:"src/assets/icons8-location-64 (1).png",
-      location:"Noida",
-      roomsIcon:"src/assets/icons8-door-50.png",
-      rooms:"3",
-      sizeIcon:"src/assets/icons8-measurement-32.png",
-      Size: "1,000",
-      priceIcon:"src/assets/icons8-dollar-24.png",
-      price:"1,5000"
-    },
-    {
-      id:"6",
-      houseName:"Great 4 BHK Villa",
-      houseImage:"src/assets/5.png",
-      locationIcon:"src/assets/icons8-location-64 (1).png",
-      location:"Noida",
-      roomsIcon:"src/assets/icons8-door-50.png",
-      rooms:"3",
-      sizeIcon:"src/assets/icons8-measurement-32.png",
-      Size: "1,000",
-      priceIcon:"src/assets/icons8-dollar-24.png",
-      price:"1,5000"
-    },
+    // {
+    //   id:"5",
+    //   houseName:"Great 4 BHK Villa",
+    //   houseImage:"src/assets/5.png",
+    //   locationIcon:"src/assets/icons8-location-64 (1).png",
+    //   location:"Noida",
+    //   roomsIcon:"src/assets/icons8-door-50.png",
+    //   rooms:"3",
+    //   sizeIcon:"src/assets/icons8-measurement-32.png",
+    //   Size: "1,000",
+    //   priceIcon:"src/assets/icons8-dollar-24.png",
+    //   price:"1,5000"
+    // },
+    // {
+    //   id:"6",
+    //   houseName:"Great 4 BHK Villa",
+    //   houseImage:"src/assets/5.png",
+    //   locationIcon:"src/assets/icons8-location-64 (1).png",
+    //   location:"Noida",
+    //   roomsIcon:"src/assets/icons8-door-50.png",
+    //   rooms:"3",
+    //   sizeIcon:"src/assets/icons8-measurement-32.png",
+    //   Size: "1,000",
+    //   priceIcon:"src/assets/icons8-dollar-24.png",
+    //   price:"1,5000"
+    // },
     
   ]
 

@@ -24,10 +24,10 @@ const Rating = () => {
         <h1 className='text-2xl md:text-4xl font-bold text-n-6'>About Dwello</h1>
       </div>
 
-      <div className='mt-12 overflow-hidden'>
+      <div className='py-12 overflow-hidden'>
         {/* Card Container */}
         <div
-          className='flex transition-transform duration-300'
+          className='flex transition-transform duration-300 py-8'
           style={{
             transform: `translateX(-${currentCard * 100 / visibleCards}%)`,
             width: `${cards.length * 100 / visibleCards}%`,
@@ -38,7 +38,7 @@ const Rating = () => {
               key={index}
               className='flex-1 min-w-[calc(100%/1)] sm:min-w-[calc(100%/2)] lg:min-w-[calc(100%/3)] 
               bg-n-8 text-n-6 rounded-xl shadow-md overflow-hidden mx-2 
-               transition-transform duration-300 hover:shadow-2xl hover:shadow-n-9'
+               transition-transform duration-300 hover:shadow-2xl  '
             >
               <div className='bg-cover bg-center h-[14rem] md:h-[14rem] w-full md:w-[40rem]
                transition-transform duration-300' style={{ backgroundImage: `url(${card.image})` }}></div>
@@ -59,7 +59,7 @@ const Rating = () => {
         </div>
       </div>
 
-      <div className='my-11 flex justify-center gap-4'>
+      <div className=' flex justify-center gap-4'>
         <button
           onClick={() => handleNavigation('prev')}
           className="flex items-center bg-n-6 text-white gap-1 px-3 py-2 cursor-pointer font-semibold rounded-md bg-gradient-to-r from-green-400 to-n-6 duration-300 hover:gap-2 hover:-translate-x-3"

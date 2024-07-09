@@ -1,11 +1,14 @@
 import React from 'react';
+import { Logo, homebg } from '../../assets';
 
 const SignUp = () => {
   return (
+    <section className=' bg-cover bg-center flex flex-col md:flex-row items-center justify-center  min-h-screen overflow-hidden '
+    style={{ backgroundImage: `url(${homebg})` }}>
     <div className="flex justify-center items-center min-h-screen mb-9 mt-14 md:mt-3">
       <div className="w-full max-w-md bg-n-7 rounded-xl shadow-2xl  p-12">
       <a className=" w-full flex item-center justify-center xl:mr-8 mb-2" href="home">
-        <img src="src\assets\Simple Typography Real Estate Logo (2).png" width={150} height={40}  alt="logo" className=''/>
+        <img src={Logo} width={150} height={40}  alt="logo" className=''/>
         </a>
         <h2 className="text-2xl text-center font-bold text-gray-900 ">Sign Up</h2>
         <p className='text-lg text-gray-500 text-center mb-6'>Create your account</p>
@@ -205,6 +208,7 @@ const SignUp = () => {
           </form>
       </div>
     </div>
+    </section>
   );
 }
 

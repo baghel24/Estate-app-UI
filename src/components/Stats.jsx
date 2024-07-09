@@ -1,13 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { statsIm } from '../assets';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Stats = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000, // Duration of the animation
+    });
+  }, []);
   return (
-    <div id='stats' className='my-12 md:my-[7rem] flex flex-col md:flex-row w-full'>
+    
+    <div id='stats' className='py-12 md:py-[7rem] flex flex-col md:flex-row w-full bg-n-7'>
       {/* First child div (Image) */}
-      <div 
-        className='flex-1 mx-7 md:mx-[5rem] mb-6 md:mb-0 md:p-4 p-28 bg-cover bg-center rounded-2xl shadow-2xl'
-        style={{ backgroundImage: `url(${'src/assets/11.png'})` }}
-      >
+      <div
+      className='flex-1 mx-7 md:mx-[5rem] mb-6 md:mb-0 md:p-4 p-28 bg-cover bg-center rounded-2xl shadow-2xl shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]'
+      style={{ backgroundImage: `url(${statsIm})` }}
+      data-aos="fade-up" // Apply AOS animation
+    >
       </div>
       
       {/* Second child div (Content) */}
@@ -20,7 +30,8 @@ const Stats = () => {
         </p>
         <div className='max-w-[35rem] my-8 md:my-[2rem] flex justify-center md:justify-start gap-6 md:gap-8 flex-wrap'>
           {/* Stat 1 */}
-          <div className='flex flex-col items-center justify-center w-[8rem] h-[8rem] md:w-[10rem] md:h-[10rem] border-4 rounded-full bg-gradient-to-t from-n-8 to-n-1 shadow-xl hover:border-n-8 transition duration-500'>
+          <div className='flex flex-col items-center justify-center w-[8rem] h-[8rem] md:w-[10rem] md:h-[10rem] border-4 rounded-full bg-gradient-to-t from-n-8 to-n-1 shadow-xl hover:border-n-8 transition duration-500 '
+          data-aos="animate-bounce animate-thrice animate-duration-700" >
             <h1 className='text-2xl md:text-3xl font-bold'>10+</h1>
             <p className='text-center'>Years of experience</p>
           </div>

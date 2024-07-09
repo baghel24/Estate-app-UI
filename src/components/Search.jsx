@@ -3,7 +3,7 @@ import React from 'react';
 const Search = () => {
   return (
     <div className="relative flex flex-col md:flex-row items-center justify-center bg-n-8 h-auto md:h-[8rem] mx-4 md:mx-[16rem] p-5 md:px-9 py-8 
-    rounded-lg shadow-xl hover:shadow-green-200 hover:border-double hover:border-4 hover:border-green-300/50">
+    rounded-lg shadow-xl hover:shadow-green-200  hover:border-green-300/50">
       <form className="flex flex-col md:flex-row md:space-x-4 md:space-y-0 space-y-4 w-full">
         
         {/* Location Input with Image Icon */}

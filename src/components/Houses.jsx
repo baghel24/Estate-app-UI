@@ -1,21 +1,33 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { houseCardDetails } from '../constants';
 import { Link } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Houses = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000, // Duration of the animation
+    });
+  }, []);
   return (
-    <div className='py-6 px-4 mx-4 md:mx-[5rem]'>
+    <section 
+      className='py-9 bg-cover bg-center items-center justify-center min-h-screen overflow-hidden'
+      style={{ backgroundImage: `url('src/assets/hh-bg.png')` }}
+    >
       <div className='text-center'>
         <h1 className='text-2xl md:text-4xl font-bold text-n-6'>Our Popular Residences</h1>
         <p className='mt-2 text-base md:text-lg font-bold text-n-6/90'>Most recommended sites</p>
       </div>
 
-      <div className='mt-10 flex flex-wrap justify-center gap-7'>
-        {houseCardDetails.map((house) => (
+      <div className='mt-10 md:mx-[5rem] mx-4 flex flex-wrap justify-center gap-7'>
+        {houseCardDetails.map((house, index) => (
           <div 
             key={house.id} 
             className='w-full sm:w-[45%] lg:w-[23%] bg-gradient-to-t from-n-7 to-n-9 text-n-1 rounded-xl shadow-2xl 
-            overflow-hidden '
+            overflow-hidden'
+            data-aos="flip-up" // Apply AOS animation
+            data-aos-delay={`${index * 150}`} // Stagger animation delays
           >
             <div 
               className='bg-cover bg-center h-[14rem] md:h-[15rem] hover:scale-105 transition-transform duration-300' 
@@ -93,7 +105,7 @@ const Houses = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
