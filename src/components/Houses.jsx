@@ -37,7 +37,7 @@ const Houses = () => {
             <div className="relative group p-4 max-w-sm mx-auto">
             <h1 className='text-lg text-n-6 font-bold'>{house.houseName}</h1>
               <div className=" py-2 text-lg md:text-xl font-bold flex items-center gap-2 text-n-6">
-                <img src={house.locationIcon} alt="icon" className='w-5 h-5 md:w-6 md:h-6' />
+                <img src={house.locationIcon} alt="icon" className='w-5 h-5 md:w-6 md:h-6 mt-[-.2rem]' />
                 {house.location}
               </div>
               <div className="flex justify-between  text-sm md:text-md font-bold text-n-6 mb-4">

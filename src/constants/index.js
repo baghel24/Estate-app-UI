@@ -1,5 +1,14 @@
 
-import { instagram, facebook, linkedin, twitter, bookicon } from "../assets";
+import { instagram, facebook, linkedin, twitter, bookicon,bulbicon,
+  chessicon,
+  communityicon,
+  processicon,
+  dooricon,
+  gamesicon, 
+  securityicon,
+  locationicon,
+  measurementicon,
+} from "../assets";
 
 export const navigtion = [
     {
@@ -56,27 +65,27 @@ export const socialMedia = [
     },
     {
       id:"Personalized Services",
-      icon: "src/assets/icons8-community-50.png",
+      icon: communityicon,
       description:"Our services adapt to your unique needs, making your journey stress-free"
     },
     {
       id:"Transparent Process",
-      icon: "src/assets/icons8-process-100.png",
+      icon: processicon,
       description:"Stay informed with our clear and honest approach to buying your home"
     },
     {
       id:"Extra Security",
-      icon: "src/assets/icons8-smart-home-checked-24.png",
+      icon: securityicon,
       description:"We provide good security when you purchase our home connect with us."
     },
     {
       id:"Good Location",
-      icon: "src/assets/icons8-location-64 (1).png",
+      icon: locationicon,
       description:"Located in very good areas surrounded by education centers , office centers and all requiered facilities."
     },
     {
       id:"Exceptional support",
-      icon: "src/assets/icons8-hand-shake-64.png",
+      icon: securityicon,
       description:"Providing peace of mind with our responsive and attentive customer service"
     }
   ]
@@ -86,52 +95,48 @@ export const socialMedia = [
       id:"1",
       houseName:"Great 8 BHK Villa",
       houseImage:"src/assets/2.png",
-      locationIcon:"src/assets/icons8-location-64 (1).png",
+      locationIcon:locationicon,
       location:"Mumbai",
-      roomsIcon:"src/assets/icons8-door-50.png",
+      roomsIcon:dooricon,
       rooms:"7",
-      sizeIcon:"src/assets/icons8-measurement-32.png",
+      sizeIcon:measurementicon,
       Size: "5,000",
-      priceIcon:"src/assets/icons8-dollar-24.png",
       price:"3,0000"
     },
     {
       id:"2",
       houseName:"Great 6 BHK Villa",
       houseImage:"src/assets/4.png",
-      locationIcon:"src/assets/icons8-location-64 (1).png",
+      locationIcon:locationicon,
       location:"Goa",
-      roomsIcon:"src/assets/icons8-door-50.png",
+      roomsIcon:dooricon,
       rooms:"5",
-      sizeIcon:"src/assets/icons8-measurement-32.png",
+      sizeIcon:measurementicon,
       Size: "1,000",
-      priceIcon:"src/assets/icons8-dollar-24.png",
       price:"1,2000"
     },
     {
       id:"3",
       houseName:"Great 6 BHK Villa",
       houseImage:"src/assets/6.png",
-      locationIcon:"src/assets/icons8-location-64 (1).png",
+      locationIcon:locationicon,
       location:"Delhi",
-      roomsIcon:"src/assets/icons8-door-50.png",
+      roomsIcon:dooricon,
       rooms:"5",
-      sizeIcon:"src/assets/icons8-measurement-32.png",
+      sizeIcon:measurementicon,
       Size: "3,000",
-      priceIcon:"src/assets/icons8-dollar-24.png",
       price:"2,0000"
     },
     {
       id:"4",
       houseName:"Great 4 BHK Villa",
       houseImage:"src/assets/5.png",
-      locationIcon:"src/assets/icons8-location-64 (1).png",
+      locationIcon:locationicon,
       location:"Noida",
-      roomsIcon:"src/assets/icons8-door-50.png",
+      roomsIcon:dooricon,
       rooms:"3",
-      sizeIcon:"src/assets/icons8-measurement-32.png",
+      sizeIcon:measurementicon,
       Size: "1,000",
-      priceIcon:"src/assets/icons8-dollar-24.png",
       price:"1,5000"
     },
     // {
