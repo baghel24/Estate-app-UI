@@ -1,18 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { h2, h12, h13, h14, h15, h16, h17, h18,} from '../../assets';
+
+
+
 
 const HouseShortDes = () => {
     const [activeIndex, setActiveIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   const images = [
-    "src/assets/5.png",
-    "src/assets/2.png",
-    "src/assets/8.png",
-    "src/assets/3.png",
-    "src/assets/4.png",
-    "src/assets/6.png",
-    "src/assets/7.png",
+    h2, h12, h13, h14, h15, h16, h17, h18, 
   ];
 
   // Function to handle the previous slide

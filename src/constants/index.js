@@ -8,7 +8,7 @@ import { instagram, facebook, linkedin, twitter, bookicon,bulbicon,
   securityicon,
   supporticon,
   locationicon,
-  measurementicon,
+  measurementicon,h2, h3, h4, h5, h6, h7, h8, h9, h10, h11, h12, h13, h14, h15, h16, h17, h18, 
 } from "../assets";
 
 export const navigtion = [
@@ -92,87 +92,61 @@ export const socialMedia = [
   ]
 
   export const houseCardDetails =[
-    {
-      id:"1",
-      houseName:"Great 8 BHK Villa",
-      houseImage:"src/assets/2.png",
-      locationIcon:locationicon,
-      location:"Mumbai",
-      roomsIcon:dooricon,
-      rooms:"7",
-      sizeIcon:measurementicon,
-      Size: "5,000",
-      price:"3,0000"
-    },
-    {
-      id:"2",
-      houseName:"Great 6 BHK Villa",
-      houseImage:"src/assets/4.png",
-      locationIcon:locationicon,
-      location:"Goa",
-      roomsIcon:dooricon,
-      rooms:"5",
-      sizeIcon:measurementicon,
-      Size: "1,000",
-      price:"1,2000"
-    },
-    {
-      id:"3",
-      houseName:"Great 6 BHK Villa",
-      houseImage:"src/assets/6.png",
-      locationIcon:locationicon,
-      location:"Delhi",
-      roomsIcon:dooricon,
-      rooms:"5",
-      sizeIcon:measurementicon,
-      Size: "3,000",
-      price:"2,0000"
-    },
-    {
-      id:"4",
-      houseName:"Great 4 BHK Villa",
-      houseImage:"src/assets/5.png",
-      locationIcon:locationicon,
-      location:"Noida",
-      roomsIcon:dooricon,
-      rooms:"3",
-      sizeIcon:measurementicon,
-      Size: "1,000",
-      price:"1,5000"
-    },
-    // {
-    //   id:"5",
-    //   houseName:"Great 4 BHK Villa",
-    //   houseImage:"src/assets/5.png",
-    //   locationIcon:"src/assets/icons8-location-64 (1).png",
-    //   location:"Noida",
-    //   roomsIcon:"src/assets/icons8-door-50.png",
-    //   rooms:"3",
-    //   sizeIcon:"src/assets/icons8-measurement-32.png",
-    //   Size: "1,000",
-    //   priceIcon:"src/assets/icons8-dollar-24.png",
-    //   price:"1,5000"
-    // },
-    // {
-    //   id:"6",
-    //   houseName:"Great 4 BHK Villa",
-    //   houseImage:"src/assets/5.png",
-    //   locationIcon:"src/assets/icons8-location-64 (1).png",
-    //   location:"Noida",
-    //   roomsIcon:"src/assets/icons8-door-50.png",
-    //   rooms:"3",
-    //   sizeIcon:"src/assets/icons8-measurement-32.png",
-    //   Size: "1,000",
-    //   priceIcon:"src/assets/icons8-dollar-24.png",
-    //   price:"1,5000"
-    // },
     
-  ]
+      {
+        "id": "1",
+        "houseName": "Luxury 8 BHK Villa",
+        "houseImage": h2,
+        "locationIcon": locationicon,
+        "location": "Mumbai",
+        "roomsIcon": dooricon,
+        "rooms": "7",
+        "sizeIcon": measurementicon,
+        "Size": "5,000",
+        "price": "3,00,00,000"
+      },
+      {
+        "id": "2",
+        "houseName": "Charming 6 BHK Beach Villa",
+        "houseImage": h4,
+        "locationIcon": locationicon,
+        "location": "Goa",
+        "roomsIcon": dooricon,
+        "rooms": "5",
+        "sizeIcon": measurementicon,
+        "Size": "1,000",
+        "price": "1,20,00,000"
+      },
+      {
+        "id": "3",
+        "houseName": "Elegant 6 BHK Urban Villa",
+        "houseImage": h6,
+        "locationIcon": locationicon,
+        "location": "Delhi",
+        "roomsIcon": dooricon,
+        "rooms": "5",
+        "sizeIcon": measurementicon,
+        "Size": "3,000",
+        "price": "2,00,00,000"
+      },
+      {
+        "id": "4",
+        "houseName": "Modern 4 BHK Suburban Villa",
+        "houseImage": h5,
+        "locationIcon": locationicon,
+        "location": "Noida",
+        "roomsIcon": dooricon,
+        "rooms": "3",
+        "sizeIcon": measurementicon,
+        "Size": "1,000",
+        "price": "1,50,00,000"
+      }
+    ]
 
   export const cards = [
     {
       id: 1,
-      image: 'src/assets/7.png',
+      image: h7,
       profile: 'src/assets/p2.png',
       name: 'Sarah Nguyen',
       location: 'San Francisco',
@@ -181,7 +155,7 @@ export const socialMedia = [
     },
     {
       id: 2,
-      image: 'src/assets/9.png',
+      image: h8,
       profile: 'src/assets/p2.png',
       name: 'Michael Rodriguez',
       location: 'San Francisco',
@@ -190,7 +164,7 @@ export const socialMedia = [
     },
     {
       id: 3,
-      image: 'src/assets/8.png',
+      image: h9,
       profile: 'src/assets/p1.png',
       name: 'Emily Johnson',
       location: 'Los Angeles',
@@ -199,7 +173,7 @@ export const socialMedia = [
     },
     {
       id: 4,
-      image: 'src/assets/10.png', // Add your new image source here
+      image: h10, // Add your new image source here
       profile: 'src/assets/p3.png', // Add your new profile image source here
       name: 'John Doe',
       location: 'New York',
@@ -315,3 +289,7 @@ export const socialMedia = [
     l2:" ",
   },
  ]
+
+
+
+ 
