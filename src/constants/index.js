@@ -8,7 +8,7 @@ import { instagram, facebook, linkedin, twitter, bookicon,bulbicon,
   securityicon,
   supporticon,
   locationicon,
-  measurementicon,h2, h3, h4, h5, h6, h7, h8, h9, h10, h11, h12, h13, h14, h15, h16, h17, h18, 
+  measurementicon,p1, p2, p3, h2, h3, h4, h5, h6, h7, h8, h9, h10, h11, h12, h13, h14, h15, h16, h17, h18, 
 } from "../assets";
 
 export const navigtion = [
@@ -147,7 +147,7 @@ export const socialMedia = [
     {
       id: 1,
       image: h7,
-      profile: 'src/assets/p2.png',
+      profile: p3,
       name: 'Sarah Nguyen',
       location: 'San Francisco',
       rating: 4.2,
@@ -156,7 +156,7 @@ export const socialMedia = [
     {
       id: 2,
       image: h8,
-      profile: 'src/assets/p2.png',
+      profile: p1,
       name: 'Michael Rodriguez',
       location: 'San Francisco',
       rating: 4.5,
@@ -165,7 +165,7 @@ export const socialMedia = [
     {
       id: 3,
       image: h9,
-      profile: 'src/assets/p1.png',
+      profile: p2,
       name: 'Emily Johnson',
       location: 'Los Angeles',
       rating: 4.4,
@@ -174,7 +174,7 @@ export const socialMedia = [
     {
       id: 4,
       image: h10, // Add your new image source here
-      profile: 'src/assets/p3.png', // Add your new profile image source here
+      profile: p3, // Add your new profile image source here
       name: 'John Doe',
       location: 'New York',
       rating: 4.7,

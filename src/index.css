@@ -76,4 +76,24 @@ input:checked ~ .checkmark {
     transform: scale(1);
   }
 }
+
+/* Large screens */
+@media (min-width: 1200px) {
+  /* styles here */
+}
+
+/* Medium screens */
+@media (min-width: 768px) and (max-width: 1199px) {
+  /* styles here */
+}
+
+/* Small screens */
+@media (max-width: 767px) {
+  /* styles here */
+}
+
+/* Extra small screens */
+@media (max-width: 479px) {
+  /* styles here */
+}
   

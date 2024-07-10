@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { conatctimage } from '../assets';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -18,7 +19,7 @@ const Contacts = () => {
         <button className="group relative bg-sky-100 h-12 w-[15rem] shadow-xl hover:shadow-green-300 text-left p-3 text-gray-500 text-base font-bold rounded-lg overflow-hidden 
           before:absolute before:w-14 before:h-14 before:right-1 before:top-1 before:z-10 scale-x-100 before:bg-gradient-to-r from-green-500 to-n-6 before:rounded-full before:blur-lg
           after:absolute after:z-10 after:w-20 after:h-20 after:bg-gradient-to-r from-green-500 to-n-6 after:right-8 after:top-3 after:rounded-full after:blur
-          transition-all duration-500 ease-in-out hover:before:blur-none hover:before:right-16 hover:before:top-8 hover:after:scale-150 hover:after:blur-none hover:after:-right-2 hover:bg-n-8 hover:text-n-6 hover:underline hover:underline-offset-4 hover:decoration-2"
+          transition-all duration-800 ease-in-out hover:before:blur-none hover:before:right-16 hover:before:top-8 hover:after:scale-150 hover:after:blur-none hover:after:-right-2 hover:bg-n-8 hover:text-n-6 hover:underline hover:underline-offset-4 hover:decoration-2"
         >
           Chat With Us
         </button>
@@ -35,7 +36,7 @@ const Contacts = () => {
         {/* Image Container */}
         <div className='w-full lg:w-[50%] flex justify-center lg:justify-end'
         data-aos="fade-right">
-          <img src="src/assets/Contact-image.png" alt="Contact" className='max-w-full h-auto lg:h-[32rem] lg:mx-0 ' />
+          <img src={conatctimage} alt="Contact" className='max-w-full h-auto lg:h-[32rem] lg:mx-0 ' />
         </div>
 
         {/* Form Container */}
