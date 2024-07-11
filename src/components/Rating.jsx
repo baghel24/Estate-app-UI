@@ -1,21 +1,46 @@
-import React, { useState } from 'react';
+import React from "react";
+import Slider from "react-slick";
 import { cards } from '../constants';
 import { ratingicon } from '../assets';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 
 const Rating = () => {
-  const [currentCard, setCurrentCard] = useState(0);
-
-  // Define the number of visible cards for different screen sizes
-  const visibleCards = window.innerWidth >= 1024 ? 3 : window.innerWidth >= 640 ? 2 : 1;
-  const totalSlides = Math.ceil(cards.length / visibleCards);
-
-  // Function to handle navigation
-  const handleNavigation = (direction) => {
-    if (direction === 'prev') {
-      setCurrentCard((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
-    } else if (direction === 'next') {
-      setCurrentCard((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
-    }
+  const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
 
   return (
@@ -25,83 +50,43 @@ const Rating = () => {
         <h1 className='text-2xl md:text-4xl font-bold text-n-6'>About Dwello</h1>
       </div>
 
-      <div className='py-12 overflow-hidden'>
-        {/* Card Container */}
-        <div
-          className='flex transition-transform duration-300 py-8'
-          style={{
-            transform: `translateX(-${currentCard * 100 / visibleCards}%)`,
-            width: `${cards.length * 100 / visibleCards}%`,
-          }}
-        >
+      <div className='slider-container py-12'>
+        <Slider {...settings}>
           {cards.map((card, index) => (
-            <div
-              key={index}
-              className='flex-1 min-w-[calc(100%/1)] sm:min-w-[calc(100%/2)] lg:min-w-[calc(100%/3)] 
-              bg-n-8 text-n-6 rounded-xl shadow-md overflow-hidden mx-2 
-               transition-transform duration-300 hover:shadow-2xl  '
-            >
-              <div className='bg-cover bg-center h-[14rem] md:h-[14rem] w-full md:w-[40rem]
-               transition-transform duration-300' style={{ backgroundImage: `url(${card.image})` }}></div>
-              <div className='flex mt-5 px-6 items-center'>
-                <div className='bg-cover rounded-full w-[3rem] h-[3rem]' style={{ backgroundImage: `url(${card.profile})` }}></div>
-                <div className='mx-3'>
-                  <h1 className='font-bold text-md'>{card.name}</h1>
-                  <h2 className='text-sm'>{card.location}</h2>
+            <div key={index} className='slide'>
+              <div
+                className='flex-1 bg-n-8 text-n-6 rounded-xl shadow-md overflow-hidden 
+                transition-transform duration-300  hover:scale-110'
+              >
+                <div
+                  className='bg-cover bg-center h-[14rem] md:h-[14rem] w-full md:w-[40rem] transition-transform duration-300'
+                  style={{ backgroundImage: `url(${card.image})` }}
+                ></div>
+                <div className='flex mt-5 px-6 items-center'>
+                  <div
+                    className='bg-cover rounded-full w-[3rem] h-[3rem]'
+                    style={{ backgroundImage: `url(${card.profile})` }}
+                  ></div>
+                  <div className='mx-3'>
+                    <h1 className='font-bold text-md'>{card.name}</h1>
+                    <h2 className='text-sm'>{card.location}</h2>
+                  </div>
+                  <div className="flex justify-end mt-4 px-6">
+                    <div className='bg-n-1 flex text-sm items-center h-6 w-11 gap-1 rounded-sm'>
+                      <img src={ratingicon} alt='icon' className='rounded-full w-[1rem] h-[1rem]' />
+                      {card.rating}
+                    </div>
+                  </div>
+
                 </div>
-                <div className='bg-n-1 flex px-1 text-center h-6 w-14 gap-2 rounded-sm'>
-                  <img src={ratingicon} alt="icon" className='rounded-full w-[1.2rem] h-[1.2rem]' />
-                  {card.rating}
-                </div>
+                <p className='text-sm px-6 mt-2 mb-4 h-16'>{card.review}</p>
               </div>
-              <p className='text-sm px-6 mt-2 mb-4 h-16 '>{card.review}</p>
             </div>
           ))}
-        </div>
-      </div>
-
-      <div className=' flex justify-center gap-4'>
-        <button
-          onClick={() => handleNavigation('prev')}
-          className="flex items-center bg-n-6 text-white gap-1 px-3 py-2 cursor-pointer font-semibold rounded-md bg-gradient-to-r from-green-400 to-n-6 duration-300 hover:gap-2 hover:-translate-x-3"
-        >
-          <svg
-            className="w-5 h-5"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M11 6L5 12M5 12L11 18M5 12H19"
-              strokeLinejoin="round"
-              strokeLinecap="round"
-            ></path>
-          </svg>
-        </button>
-        <button
-          onClick={() => handleNavigation('next')}
-          className="flex items-center bg-n-6 text-white gap-1 px-3 py-2 cursor-pointer font-semibold rounded-md bg-gradient-to-r from-green-400 to-n-6 duration-300 hover:gap-2 hover:translate-x-3"
-        >
-          <svg
-            className="w-5 h-5"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M13 6L19 12M19 12L13 18M19 12H5"
-              strokeLinejoin="round"
-              strokeLinecap="round"
-            ></path>
-          </svg>
-        </button>
+        </Slider>
       </div>
     </div>
   );
-}
+};
 
 export default Rating;

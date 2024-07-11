@@ -4,6 +4,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
 :root {
   --font-sora: "Nunito Sans", sans-serif;
  
@@ -96,4 +99,13 @@ input:checked ~ .checkmark {
 @media (max-width: 479px) {
   /* styles here */
 }
+
+.slide {
+  padding: 25px 10px 25px; /* Adjust this value to set the desired gap */
+}
+
+.slick-list {
+  margin: 0 10px; /* This should be negative of the padding to align slides properly */
+}
+
   
