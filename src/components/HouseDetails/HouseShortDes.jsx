@@ -119,14 +119,14 @@ const HouseShortDes = () => {
             </button>
           </div>
           <div className='max-w-[55rem]'>
-            <div className="relative p-2 mx-10 border-2 mt-3 flex gap-9 rounded-2xl bg-n-6 text-n-7 items-center justify-center">
+            <div className="relative p-2 mx-4 md:mx-10 border-2 mt-3 flex gap-9 rounded-2xl bg-n-6 text-n-7 items-center justify-center">
               <span>4 Bedrooms</span>
               <span>3 Bathrooms</span>
               <span>Fully Furnished</span>
             </div>
           </div>
           <div className="border-4 border-n-8 border-double mt-4 p-6 rounded-2xl bg-n-1 shadow-md shadow-n-8">
-            <div className="flex w-full mb-6 gap-5 text-sm">
+            <div className="flex  w-full mb-6 gap-5 text-sm">
               <div className="w-full">
                 <span className="text-gray-500">Area</span>
                 <h1 className="font-bold">1200 sq ft.</h1>

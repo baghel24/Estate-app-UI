@@ -4,21 +4,15 @@ import Houses from "../Houses"
 import HouseDesRight from './HouseDesRight';
 import { HouseRatingBar, Landmark,houseCardDetails } from '../../constants';
 import HouseShortDes from './HouseShortDes';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 // import HouseDetails from '../Pages/HouseDetails';
 const HouseDes = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
-  const images = [
-    "src/assets/5.png",
-    "src/assets/2.png",
-    "src/assets/8.png",
-    "src/assets/3.png",
-    "src/assets/4.png",
-    "src/assets/6.png",
-    "src/assets/7.png",
-  ];
 
   // Function to handle the previous slide
   const handlePrev = () => {
@@ -76,37 +70,72 @@ const HouseDes = () => {
     );
   };
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
   return (
     <>
-      <section >
+      <section className='mx-[-4.2rem] md:mx-0' >
         <div className='flex gap-12'>
-        <div className='w-[58.5%]'>
+        <div className=' w-[22rem] md:w-[58.5%]'>
           <HouseShortDes/>
           <div className='border-2 mt-5 px-6'>
-            <h1 className=' py-3 h5 font-bold'>More Deatails</h1>
-            <div className=' text-xl py-5 text-n-6 space-y-4'>
-              <div className=' flex '>
-                <h1 className='w-[40%] text-n-6/70'>Price Breakdown</h1>
+            <h1 className=' py-3 text-2xl md:text-3xl font-bold'>More Deatails</h1>
+            <div className=' text-lg md:text-xl py-5 text-n-6 space-y-4'>
+              <div className=' flex gap-'>
+                <h1 className='w-[50%]  text-n-6/70'>Price</h1>
                 <span className='w-full font-bold'>₹1 Cr | ₹3,000</span>
               </div>
-              <div className=' flex'>
-                <h1 className='w-[40%] text-n-6/70'>Address</h1>
+              <div className=' flex gap- '>
+                <h1 className='w-[50%] text-n-6/70'>Address</h1>
                 <span className='w-full font-bold'>Srishti Oasis New Rajaram Wadi Bhandup West Mumbai Maharashtra 400078, Bhandup West, Mumbai
                   <br></br>- Central Mumbai, Maharashtra</span></div>
               <div className=' flex   '>
-                <h1 className='w-[40%] text-n-6/70'>Landmark</h1>
+                <h1 className='w-[50%] text-n-6/70'>Landmark</h1>
                 <span className='w-full font-bold'>Air Fabric Duct India</span></div>
               <div className=' flex g'>
-                <h1 className='w-[40%] text-n-6/70'>Flooring</h1>
+                <h1 className='w-[50%] text-n-6/70'>Flooring</h1>
                 <span className='w-full font-bold'>Vitrified, Wooden</span></div>
               <div className=' flex '>
-                <h1 className='w-[40%] text-n-6/70'>Developer</h1>
+                <h1 className='w-[50%] text-n-6/70'>Developer</h1>
                 <span className='w-full font-bold'>Kv Group</span></div>
               <div className=' flex '>
-                <h1 className='w-[40%] text-n-6/70'>Additional Rooms</h1>
+                <h1 className='w-[50%] text-n-6/70'>Additional Rooms</h1>
                 <span className='w-full font-bold'>1 Store Room</span></div>
               <div className=' flex '>
-                <h1 className='w-[40%] text-n-6/70'>Parking</h1>
+                <h1 className='w-[50%] text-n-6/70'>Parking</h1>
                 <span className='w-full font-bold'>2 covered parking</span></div>
 
 
@@ -117,7 +146,7 @@ const HouseDes = () => {
             <h1 className=' py-3 h5 font-bold'>
               Amenties</h1>
 
-            <div className='flex w-full mb-4 py-3'>
+            <div className='flex flex-wrap w-full mb-4 py-3'>
               <div className='flex w-full gap-4 '>
                 <img src="src\assets\icons8-bulb-64.png" alt="" className='w-10 ' />
                 <h1 className=' text-xl text-n-6 mt-2'>Power Back up</h1>
@@ -131,7 +160,7 @@ const HouseDes = () => {
                 <h1 className=' text-xl text-n-6 mt-2'>Gymnasium</h1>
               </div>
             </div>
-            <div className='flex w-full py-3 mb-4'>
+            <div className='flex flex-wrap w-full py-3 mb-4'>
               <div className='flex w-full gap-4'>
                 <img src="src\assets\icons8-user-shield-40.png" alt="" className='w-9 h-9 ' />
                 <h1 className=' text-xl text-n-6 mt-1'>Security</h1>
@@ -176,9 +205,9 @@ const HouseDes = () => {
           <div className='border-2 mt-5 px-6 h-auto'>
             <h1 className='py-3 h5 font-bold '>About the area</h1>
 
-            <div className='flex  gap-9'>
+            <div className='flex flex-wrap md:gap-9'>
               <div className=' border-2 flex gap-9 mb-4 px-4 py-2 rounded-3xl shadow-lg'>
-                <h1 className='text-xl text-n-6 font-bold '>Rating</h1>
+                <h1 className='text-lg md:text-xl text-n-6 font-bold '>Rating</h1>
 
                 <div class="flex items-center">
                   <svg class="w-4 h-4 text-yellow-400 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
@@ -204,7 +233,7 @@ const HouseDes = () => {
 
               </div>
               <div className='border-2 flex gap-9 mb-4 px-4 py-2  rounded-3xl shadow-lg '>
-                <h1 className='text-xl text-n-6 font-bold '>Ranked</h1>
+                <h1 className='text-lg md:text-xl text-n-6 font-bold '>Ranked</h1>
                 <span className='text-lg text-gray-600'>232/1250 Localities</span>
               </div>
             </div>
@@ -214,7 +243,7 @@ const HouseDes = () => {
               <div class=" gap-8 sm:grid sm:grid-cols-3 mb-11">
 
                 {HouseRatingBar.map((rating) => (
-                  <div key={rating.id} class="mb-[-1.5rem]">
+                  <div key={rating.id} class="md:mb-[-1.5rem]">
                     <dl>
                       <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">{rating.label}</dt>
                       <dd class="flex items-center">
@@ -239,12 +268,12 @@ const HouseDes = () => {
           </div>
 
           <div className='border-2 mt-5 px-6 h-auto'>
-            <h1 className='py-3 h5 font-bold '>Landmark</h1>
+            <h1 className='py-3 text-xl font-bold '>Landmark</h1>
 
             <div className='sm:grid sm:grid-cols-2 gap-5 mb-6' >
               {Landmark.map((landmark) => (
                 <div key={landmark.id} className=''>
-                    <div className='border-2 shadow-lg px-4 py-3 '>
+                    <div className='border-2 shadow-lg px-4 py-3 mb-3'>
                 <div className='flex w-full'>
                 <h1  className='text-xl font-bold w-full'>{landmark.label}</h1>
                 <img src={landmark.icon} alt="icon"  className='w-14 h-14'/>
@@ -263,7 +292,7 @@ const HouseDes = () => {
           <HouseDesRight />
         </div>
         </div>
-        <div className='relative border-2 mt-8 px-4 h-auto  w-[90%] '>
+        <div className='relative border-2 mt-8 px-4 h-auto  w-[22rem] md:w-[90%] '>
   <h1 className='py-3 text-2xl font-bold'>Similar Properties</h1>
   <div className='flex flex-wrap  gap-5 mb-6 w-full overflow-hidden'>
     
@@ -328,59 +357,7 @@ const HouseDes = () => {
       </div>
     ))}
   </div>
-  {/* Slider Controls */}
-  <button
-              type="button"
-              className="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-              onClick={handlePrev}
-              disabled={isTransitioning}
-              data-carousel-prev
-            >
-              <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white">
-                <svg
-                  className="w-4 h-4 text-white"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 6 10"
-                >
-                  <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M5 1 1 5l4 4"
-                  />
-                </svg>
-                <span className="sr-only">Previous</span>
-              </span>
-            </button>
-            <button
-              type="button"
-              className="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-              onClick={handleNext}
-              disabled={isTransitioning}
-              data-carousel-next
-            >
-              <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white">
-                <svg
-                  className="w-4 h-4 text-n-6"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 6 10"
-                >
-                  <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="m1 9 4-4-4-4"
-                  />
-                </svg>
-                <span className="sr-only">Next</span>
-              </span>
-            </button>
+  
 </div>
 
       </section> 
