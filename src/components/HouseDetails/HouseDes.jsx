@@ -4,9 +4,8 @@ import Houses from "../Houses"
 import HouseDesRight from './HouseDesRight';
 import { HouseRatingBar, Landmark,houseCardDetails } from '../../constants';
 import HouseShortDes from './HouseShortDes';
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { bulbicon, gymicon, sheildicon, chessicon,  } from '../../assets';
+
 
 // import HouseDetails from '../Pages/HouseDetails';
 const HouseDes = () => {
@@ -109,7 +108,7 @@ const HouseDes = () => {
     <>
       <section className='mx-[-4.2rem] md:mx-0' >
         <div className='flex gap-12'>
-        <div className=' w-[22rem] md:w-[58.5%]'>
+        <div className='sm:w-full md:w-[58.5%]'>
           <HouseShortDes/>
           <div className='border-2 mt-5 px-6'>
             <h1 className=' py-3 text-2xl md:text-3xl font-bold'>More Deatails</h1>
@@ -143,34 +142,34 @@ const HouseDes = () => {
 
           </div>
           <div className='border-2 mt-5 px-6 '>
-            <h1 className=' py-3 h5 font-bold'>
+            <h1 className=' py-3 text-2xl font-bold'>
               Amenties</h1>
 
-            <div className='flex flex-wrap w-full mb-4 py-3'>
+            <div className='md:flex  w-full md:mb-4 py-3 space-y-2'>
               <div className='flex w-full gap-4 '>
-                <img src="src\assets\icons8-bulb-64.png" alt="" className='w-10 ' />
+                <img src={bulbicon} alt="" className='w-10 ' />
                 <h1 className=' text-xl text-n-6 mt-2'>Power Back up</h1>
               </div>
               <div className='flex w-full gap-4'>
-                <img src="src\assets\icons8-bulb-64.png" alt="" className='w-10 ' />
+                <img src={bulbicon}  alt="" className='w-10 ' />
                 <h1 className=' text-xl text-n-6 mt-2'>Rain Water Harvesting</h1>
               </div>
               <div className='flex w-full gap-4'>
-                <img src="src\assets\icons8-gym-48.png" alt="" className='w-10 ' />
+                <img src={gymicon}  alt="" className='w-10 ' />
                 <h1 className=' text-xl text-n-6 mt-2'>Gymnasium</h1>
               </div>
             </div>
-            <div className='flex flex-wrap w-full py-3 mb-4'>
+            <div className='md:flex  w-full md:py-3 mb-4 space-y-2'>
               <div className='flex w-full gap-4'>
-                <img src="src\assets\icons8-user-shield-40.png" alt="" className='w-9 h-9 ' />
+                <img src={sheildicon}  alt="" className='w-9 h-9 ' />
                 <h1 className=' text-xl text-n-6 mt-1'>Security</h1>
               </div>
               <div className='flex w-full gap-4'>
-                <img src="src\assets\icons8-chess-64.png" alt="" className='w-10' />
+                <img src={chessicon}  alt="" className='w-10' />
                 <h1 className=' text-xl text-n-6 mt-2'>Indoor Games Room</h1>
               </div>
               <div className='flex w-full gap-4'>
-                <img src="src\assets\icons8-bulb-64.png" alt="" className='w-10 ' />
+                <img src={bulbicon}  alt="" className='w-10 ' />
                 <h1 className=' text-xl text-n-6 mt-2'>Fire Fighting Equipment</h1>
               </div>
             </div>
@@ -203,10 +202,10 @@ const HouseDes = () => {
             </button>
           </div>
           <div className='border-2 mt-5 px-6 h-auto'>
-            <h1 className='py-3 h5 font-bold '>About the area</h1>
+            <h1 className='py-3 text-2xl md:text-3xl font-bold '>About the area</h1>
 
             <div className='flex flex-wrap md:gap-9'>
-              <div className=' border-2 flex gap-9 mb-4 px-4 py-2 rounded-3xl shadow-lg'>
+              <div className=' border-2 md:flex gap-9 mb-4 px-4 py-2 rounded-3xl shadow-lg'>
                 <h1 className='text-lg md:text-xl text-n-6 font-bold '>Rating</h1>
 
                 <div class="flex items-center">
@@ -268,7 +267,7 @@ const HouseDes = () => {
           </div>
 
           <div className='border-2 mt-5 px-6 h-auto'>
-            <h1 className='py-3 text-xl font-bold '>Landmark</h1>
+            <h1 className='py-3 text-2xl  font-bold '>Landmark</h1>
 
             <div className='sm:grid sm:grid-cols-2 gap-5 mb-6' >
               {Landmark.map((landmark) => (
