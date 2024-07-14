@@ -107,8 +107,8 @@ const HouseDes = () => {
   return (
     <>
       <section className='mx-[-4.2rem] md:mx-0' >
-        <div className='flex gap-12'>
-        <div className='sm:w-full md:w-[58.5%]'>
+        <div className='flex flex-wrap md:gap-5 lg:gap-12'>
+        <div className='w-[21rem] md:w-[40rem] lg:w-[58.5%]'>
           <HouseShortDes/>
           <div className='border-2 mt-5 px-6'>
             <h1 className=' py-3 text-2xl md:text-3xl font-bold'>More Deatails</h1>
@@ -287,18 +287,18 @@ const HouseDes = () => {
           </div>
 
         </div>
-        <div className='mt-5 w-[29%]'>
+        <div className='mt-5 w-[21rem] md:w-[40rem] lg:w-[29%]'>
           <HouseDesRight />
         </div>
         </div>
-        <div className='relative border-2 mt-8 px-4 h-auto  w-[22rem] md:w-[90%] '>
+        <div className='relative border-2 mt-8 px-4 h-auto mb-5 w-[22rem] md:w-[90%] '>
   <h1 className='py-3 text-2xl font-bold'>Similar Properties</h1>
-  <div className='flex flex-wrap  gap-5 mb-6 w-full overflow-hidden'>
+  <div className='flex flex-wrap  gap-5 mb-12 w-full overflow-hidden'>
     
     {houseCardDetails.map((house) => (
       <div 
         key={house.id} 
-        className='w-full sm:w-[45%] lg:w-[20%] bg-gradient-to-t from-n-7 to-n-9 text-n-1 rounded-xl shadow-2xl overflow-hidden transition-transform duration-300'
+        className='w-full sm:w-[45%] lg:w-[22%]  mb-5 bg-gradient-to-t from-n-7 to-n-9 text-n-1 rounded-xl shadow-2xl overflow-hidden transition-transform duration-300'
       >
         <div 
           className='bg-cover bg-center h-[11rem] md:h-[12rem] hover:scale-105 transition-transform duration-300'
@@ -342,16 +342,17 @@ const HouseDes = () => {
             </div>
           </div>
           
-          <div className="px-6 py-2 text-lg md:text-xl font-bold flex justify-end items-center gap-2 text-n-6">
+          <div className=" py-2 text-lg md:text-xl font-bold flex justify-end items-center gap-2 text-n-6">
             $ {house.price}
           </div>
           
+          <Link to={"/listpage"}>
           <button 
-            className="absolute opacity-0 bg-gradient-to-r from-green-400 to-n-6 group-hover:opacity-100 bottom-2 left-4 text-white py-1 px-4 rounded-lg transition-opacity duration-300 ease-in-out"
+            className="absolute mt-5 opacity-0 bg-gradient-to-r from-green-400 to-n-6 group-hover:opacity-100 bottom-2 left-4 text-white py-1 px-4 rounded-lg transition-opacity duration-300 ease-in-out"
             aria-label={`View details for ${house.houseName}`}
           >
             View Details
-          </button>
+          </button></Link>
         </div>
       </div>
     ))}
