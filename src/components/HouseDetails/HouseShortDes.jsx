@@ -47,7 +47,7 @@ const HouseShortDes = () => {
 
           <div id="gallery" className="relative  shadow-2xl  rounded-lg" data-carousel="slide">
             {/* Carousel Wrapper */}
-            <div className="relative overflow-hidden md:h-[25rem] shadow-2xl rounded-lg">
+            <div className="relative overflow-hidden md:h-[23rem] shadow-2xl rounded-lg">
               <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
                 {images.map((src, index) => (
                   <div

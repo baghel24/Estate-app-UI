@@ -25,7 +25,7 @@ export const navigtion = [
     {
         id: "agents",
         title: "Agents",
-        url: "agents"
+        url: "/agents"
     },
     {
         id: "contact",
@@ -107,7 +107,7 @@ export const socialMedia = [
       },
       {
         "id": "2",
-        "houseName": "Charming 6 BHK Beach Villa",
+        "houseName": "6 BHK Beach Villa",
         "houseImage": h4,
         "locationIcon": locationicon,
         "location": "Goa",
@@ -131,7 +131,7 @@ export const socialMedia = [
       },
       {
         "id": "4",
-        "houseName": "Modern 4 BHK Suburban Villa",
+        "houseName": "Modern 4 BHK  Villa",
         "houseImage": h5,
         "locationIcon": locationicon,
         "location": "Noida",
@@ -288,6 +288,95 @@ export const socialMedia = [
     l1:"Badwik Hospital",
     l2:" ",
   },
+ ]
+
+ export const agentCards = [
+    {
+      id: '1',
+      name: "Rahul Kumar",
+      group: "KV Group",
+      since: "2021",
+      served: "150",
+      forSale: "72",
+      forRent: "5",
+      rating: "4.5",
+      operatingIn: "Address Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      saleRange: "4 lac - 5 lac",
+      rentRange: "4 lac - 5 lac",
+      imageSrc: "src/assets/p2.png",
+    },
+    {
+      id: '2',
+      name: "Aisha Ahmed",
+      group: "Prime Realty",
+      since: "2019",
+      served: "200",
+      forSale: "80",
+      forRent: "10",
+      rating: "4.8",
+      operatingIn: "Address Vivamus lacinia odio vitae vestibulum vestibulum.",
+      saleRange: "6 lac - 8 lac",
+      rentRange: "3 lac - 4 lac",
+      imageSrc: "src/assets/p1.png",
+    },
+    {
+      id: '3',
+      name: "John Doe",
+      group: "Urban Homes",
+      since: "2018",
+      served: "180",
+      forSale: "60",
+      forRent: "15",
+      rating: "4.7",
+      operatingIn: "Address Curabitur non nulla sit amet nisl tempus convallis .",
+      saleRange: "5 lac - 6 lac",
+      rentRange: "2 lac - 3 lac",
+      imageSrc: "src/assets/p3.png",
+    },
+    {
+      id: '4',
+      name: "Maria Garcia",
+      group: "Luxury Estates",
+      since: "2020",
+      served: "120",
+      forSale: "90",
+      forRent: "20",
+      rating: "4.6",
+      operatingIn: "Address Donec sollicitudin molestie malesuada.",
+      saleRange: "8 lac - 10 lac",
+      rentRange: "5 lac - 6 lac",
+      imageSrc: "src/assets/p2.png",
+    },
+    // {
+    //   id: '5',
+    //   name: "David Smith",
+    //   group: "Affordable Homes",
+    //   since: "2017",
+    //   served: "220",
+    //   forSale: "100",
+    //   forRent: "25",
+    //   rating: "4.9",
+    //   operatingIn: "Address Pellentesque in ipsum id orci porta dapibus.",
+    //   saleRange: "3 lac - 4 lac",
+    //   rentRange: "1 lac - 2 lac",
+    //   imageSrc: "src/assets/p5.png",
+    // },
+    // {
+    //   id: '6',
+    //   name: "Liu Wei",
+    //   group: "Modern Living",
+    //   since: "2015",
+    //   served: "250",
+    //   forSale: "110",
+    //   forRent: "30",
+    //   rating: "5.0",
+    //   operatingIn: "Address Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.",
+    //   saleRange: "7 lac - 9 lac",
+    //   rentRange: "4 lac - 5 lac",
+    //   imageSrc: "src/assets/p6.png",
+    // },
+  
+  
  ]
 
 

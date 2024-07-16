@@ -1,4 +1,5 @@
 import HomePage from "./HomeLandingPage/HomePage"
+import Agents from "./components/Agents"
 import Contacts from "./components/Contacts"
 import Footer from "./components/Footer"
 import Header from "./components/Header"
@@ -23,6 +24,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage/>} />
         <Route path="/services" element={<Qualities/>} />
+        <Route path="/agents" element={<Agents/>} />
         <Route path="/contact" element={<Contacts/>} />
         <Route path="/listpage" element={<ListPage />} />
         <Route path="/houseDetails" element={<HouseDetails />} />

@@ -6,6 +6,7 @@ import Qualities from '../components/Qualities'
 import Rating from '../components/Rating'
 import Houses from '../components/Houses'
 import Contacts from '../components/Contacts'
+import Agents from '../components/Agents'
 
 const HomePage = () => {
   return (
@@ -14,6 +15,7 @@ const HomePage = () => {
       <Search/>
       <Stats/>
       <Qualities/>
+      <Agents/>
       <Houses/>
       <Rating/>
       <Contacts/>

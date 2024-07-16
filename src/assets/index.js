@@ -27,6 +27,7 @@ import priceicon from "./icons8-price-50.png"
 import conatctimage from "./Contact-image.png"
 import gymicon from "./icons8-gym-48.png"
 import sheildicon from "./icons8-user-shield-40.png"
+import rating from "./rating.svg"
 
 import p1 from "./p1.png"
 import p2 from "./p2.png"
@@ -80,6 +81,7 @@ export{
   conatctimage,
   gymicon,
   sheildicon,
+  rating,
   p1, p2, p3, 
   h2, h3, h4, h5, h6, h7, h8, h9, h10, h11, h12, h13, h14, h15, h16, h17, h18, 
 

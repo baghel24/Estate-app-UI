@@ -16,18 +16,18 @@ const ListPage = () => {
         <div className='w-full md:w-[50%] h-[calc(100vh-8rem)] overflow-y-auto hide-scrollbar '>
           <div className='space-y-4 '> {/* Added space-y-4 for gap between cards */}
             {houseCardDetails.map((house) => (
-              <Link to="" key={house.id}>
+              <Link to="/houseDetails" key={house.id}>
                 <div className='flex hover:bg-n-8 text-n-6 rounded-xl shadow-md overflow-hidden '>
-                  <div className='bg-cover bg-center w-[20rem] md:h-[10.5rem] hover:scale-105 duration-300'
+                  <div className='bg-cover bg-center w-[15rem] md:w-[20rem] md:h-[12rem] hover:scale-105 duration-300'
                     style={{ backgroundImage: `url(${house.houseImage})` }}>
                   </div>
-                  <div className="relative group p-2 mx-2">
+                  <div className="relative group p-2 mx-2 w-[10rem] md:w-[15rem]">
                     <h1 className='text-lg font-bold'>{house.houseName}</h1>
                     <div className="text-md font-bold flex gap-2 mb-3 mt-4 text-n-6/60">
                       <img src={house.locationIcon} alt="Location Icon" className='w-4 h-4 mt-[.1rem]' />
                       {house.location}
                     </div>
-                    <div className="flex justify-between text-sm font-bold gap-20 mt-5">
+                    <div className="flex justify-between text-sm font-bold gap-10 md:gap-20 mt-5">
                       <div className='flex gap-2'>
                         <img src={house.roomsIcon} alt="Rooms Icon" className='w-4 h-4 mt-[.1rem]' />
                         {house.rooms} Rooms
