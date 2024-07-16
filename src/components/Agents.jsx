@@ -6,7 +6,7 @@ const Agents = () => {
   return (
     <section
       id="agents"
-      className="bg-cover bg-center py-16 px-4 md:px-[5rem] bg-no-repeat md:flex-row items-center justify-center  overflow-hidden"
+      className="bg-no-repeat items-center justify-center  overflow-hidden"
     >
       <div className="text-center mb-8">
         <h1 className="text-xl lg:text-4xl font-bold text-n-6">Most Preferred Agents</h1>
@@ -16,13 +16,13 @@ const Agents = () => {
       </div>
 
       {/* Agent Cards */}
-      <div className='flex gap-4 flex-wrap'>
+      <div className='flex py-10 mx-4 px-4 md:flex-row  md:px-[5rem] gap-4 flex-wrap'>
       {agentCards.map((agent) => (
        
       <div key={agent.id}  className="relative group duration-500 cursor-pointer overflow-hidden text-gray-50 h-[20remrem] w-[17rem] rounded-2xl shadow-2xl hover:duration-700">
       <div className="w-[17rem] h-[21rem] bg-n-7 text-gray-800">
         
-        <div className="flex px-3 items-center gap-2 bg-n-6">
+        <div className="flex px-3 items-center gap-2 bg-gradient-to-r from-green-400 to-n-6">
           <div className="mt-4">
             <img src={agent.imageSrc} alt={`${agent.name}`} className="bg-cover rounded-t-lg w-[4rem] h-[4rem]" />
           </div>

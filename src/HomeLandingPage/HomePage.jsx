@@ -12,7 +12,7 @@ const HomePage = () => {
   return (
     <div>
       <Home/>
-      <Search/>
+      {/* <Search/> */}
       <Stats/>
       <Qualities/>
       <Agents/>

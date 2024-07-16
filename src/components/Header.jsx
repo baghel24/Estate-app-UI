@@ -16,7 +16,7 @@ const Header = () => {
         <nav className=' flex text-xl text-n-6 font-semibold  lg:static lg:flex lg:mx-auto '>
           <ul className='list-none sm:flex hidden justify-end items-center flex-1 '>
             {navigtion.map((nav, index) =>
-              <li key={nav.id} className={' px-3 py-2 cursor-pointer  mr-10 hover:scale-110  hover:shadow-xl smky-btn3 relative hover:text-n-1 py-2 px-6 after:absolute after:h-[.2rem] after:hover:h-[200%] transition-all duration-500 hover:transition-all hover:duration-500 after:transition-all after:duration-500 after:hover:transition-all after:hover:duration-500 overflow-hidden z-20 after:z-[-20] after:bg-gradient-to-r from-green-400 to-n-6 after:rounded-t-full after:w-full after:bottom-0 after:left-0 text-n-6'}>
+              <li key={nav.id} className={' px-3 py-2 cursor-pointer   mr-10 hover:scale-110  hover:shadow-xl smky-btn3 relative hover:text-n-1 py-2 px-6 after:absolute after:h-[.2rem] after:hover:h-[200%] transition-all duration-500 hover:transition-all hover:duration-500 after:transition-all after:duration-500 after:hover:transition-all after:hover:duration-500 overflow-hidden z-20 after:z-[-20] after:bg-gradient-to-r from-green-400 to-n-6 after:rounded-t-full after:w-full after:bottom-0 after:left-0 text-n-6'}>
                 <a href={`#${nav.id}`}> {nav.title}</a>
 
               </li>
