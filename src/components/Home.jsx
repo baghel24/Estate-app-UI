@@ -24,7 +24,7 @@ const Home = () => {
         <div className='py-6 md:py-10 space-y-8'>
 {/* search bar */}
         <div className="flex shadow-xl mx-5 md:mx-0 md:w-[23rem] mb-14">
-    <div className="rounded-lg bg-gradient-to-r from-green-400 to-n-6 p-3">
+    <div className="rounded-lg bg-gradient-to-r from-green-400 to-n-6 p-2">
       <div className="flex">
         <div className="flex md:w-20 bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 items-center border border-gray-100 justify-center rounded-tl-2xl rounded-bl-2xl border-r border-gray-200  p-5">
           <svg viewBox="0 0 20 20" aria-hidden="true" className="pointer-events-none absolute w-5 fill-gray-700 transition">
