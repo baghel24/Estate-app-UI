@@ -27,6 +27,13 @@ import priceicon from "./icons8-price-50.png"
 import conatctimage from "./Contact-image.png"
 import gymicon from "./icons8-gym-48.png"
 import sheildicon from "./icons8-user-shield-40.png"
+import schoolicon from "./icons8-school-48.png"
+import Mallicon from "./icons8-shopping-mall-66.png"
+import Transporticon from "./icons8-transportation-60.png"
+import Hospitalicon from "./icons8-hospital-48.png"
+import questionicon from "./icons8-question-30.png"
+import Shareicon from "./icons8-share-50.png"
+
 import rating from "./rating.svg"
 
 import p1 from "./p1.png"
@@ -81,6 +88,12 @@ export{
   conatctimage,
   gymicon,
   sheildicon,
+  schoolicon,
+  Mallicon,
+  Transporticon,
+  Hospitalicon,
+  questionicon,
+  Shareicon,
   rating,
   p1, p2, p3, 
   h2, h3, h4, h5, h6, h7, h8, h9, h10, h11, h12, h13, h14, h15, h16, h17, h18, 

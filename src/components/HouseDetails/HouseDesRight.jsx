@@ -1,4 +1,5 @@
 import React from 'react';
+import {  questionicon,Shareicon, } from '../../assets';
 
 const HouseDesRight = () => {
   return (
@@ -20,11 +21,11 @@ const HouseDesRight = () => {
           <span className="hidden md:inline ml-2">Favorite</span>
         </div>
         <div className="w-1/3 border-r-2 p-2 flex items-center justify-center">
-          <img src="src/assets/icons8-question-30.png" alt="Ask an Agent" className="w-7" />
+          <img src={questionicon} alt="Ask an Agent" className="w-7" />
           <span className="hidden md:inline ml-2">Ask an Agent</span>
         </div>
         <div className="w-1/3 p-2 flex items-center justify-center">
-          <img src="src/assets/icons8-share-50.png" alt="Share" className="w-7" />
+          <img src={Shareicon} alt="Share" className="w-7" />
           <span className="hidden md:inline ml-2">Share</span>
         </div>
       </div>

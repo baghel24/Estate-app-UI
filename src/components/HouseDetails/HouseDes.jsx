@@ -342,11 +342,11 @@ const HouseDes = () => {
             </div>
           </div>
           
-          <div className=" py-2 text-lg md:text-xl font-bold flex justify-end items-center gap-2 text-n-6">
-            $ {house.price}
+          <div className=" py-2 text-lg md:text-xl font-bold flex justify-end items-center text-n-6">
+          ₹{house.price}
           </div>
           
-          <Link to={"/listpage"}>
+          <Link to={"/houseDetails"}>
           <button 
             className="absolute mt-5 opacity-0 bg-gradient-to-r from-green-400 to-n-6 group-hover:opacity-100 bottom-2 left-4 text-white py-1 px-4 rounded-lg transition-opacity duration-300 ease-in-out"
             aria-label={`View details for ${house.houseName}`}
